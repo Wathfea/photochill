@@ -114,9 +114,7 @@ header #navbar-brand span {
     padding-top:15px;
     padding-bottom:25px;
 }
-.final-tiles-gallery .ftg-items{
-    height:600px !important;
-}
+
 .about-box .row, .contact-box .row{
     display:flex;
     justify-content:center;
