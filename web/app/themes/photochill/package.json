@@ -1,0 +1,19 @@
+{
+  "name": "photochill",
+  "version": "1.0.0",
+  "description": "Project file for Photochill website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Szabó Renáta Edit & Dávid Perlusz",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  }
+}
