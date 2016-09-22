@@ -100,6 +100,88 @@ add_action( 'wp_enqueue_scripts', 'pc_scripts' );
 require get_template_directory() . '/inc/PCMyWalkerNavMenu.php';
 
 /**
+ * Register our custom post type for Main Photos
+ */
+add_action( 'init', 'register_mainphotos' );
+function register_mainphotos() {
+
+    $args = array(
+        'labels'             => array(
+            'name'               => _x( 'Főoldali képek', 'post type general name', 'photochill' ),
+            'singular_name'      => _x( 'Kép', 'post type singular name', 'photochill' ),
+            'menu_name'          => _x( 'Főoldali képek', 'admin menu', 'photochill' ),
+            'name_admin_bar'     => _x( 'Főoldali képek', 'add new on admin bar', 'photochill' ),
+            'add_new'            => _x( 'Új', 'About', 'photochill' ),
+            'add_new_item'       => __( 'Új', 'photochill' ),
+            'new_item'           => __( 'Új kép', 'photochill' ),
+            'edit_item'          => __( 'Kép szerkesztése', 'photochill' ),
+            'view_item'          => __( 'Kép megtekintése', 'photochill' ),
+            'all_items'          => __( 'Összes elem', 'photochill' ),
+            'search_items'       => __( 'Keresés', 'photochill' ),
+            'parent_item_colon'  => __( 'Szülő:', 'photochill' ),
+            'not_found'          => __( 'Nem található.', 'photochill' ),
+            'not_found_in_trash' => __( 'Nem található a kukában.', 'photochill' )
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'mainphotos' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail' )
+    );
+
+    register_post_type( 'mainphotos', $args );
+}
+
+/**
+ * Add featured image in admin list
+ */
+ function custom_columns( $columns ) {
+     $columns = array(
+         'cb' => '<input type="checkbox" />',
+         'featured_image' => 'Kép',
+         'title' => 'Cím',
+         'comments' => '<span class="vers"><div title="Comments" class="comment-grey-bubble"></div></span>',
+         'date' => 'Dátum'
+      );
+     return $columns;
+ }
+ add_filter('manage_mainphotos_posts_columns' , 'custom_columns');
+
+/**
+ * Register the columns and add the thumbnail for the feauter image column.
+ */
+ function custom_columns_data( $column, $post_id ) {
+     switch ( $column ) {
+     case 'featured_image':
+         echo the_post_thumbnail(array(100,100));
+         break;
+     }
+ }
+ add_action( 'manage_posts_custom_column' , 'custom_columns_data', 10, 2 );
+
+/**
+ * Prevent delete the mian pictures
+ * @param  [type] $post_ID [description]
+ * @return [type]          [description]
+ */
+ function restrict_post_deletion($post_ID){
+      $restricted_ements = array(45,51);
+      if(in_array($post_ID, $restricted_ements)){
+          wp_redirect(admin_url('index.php'));
+          exit;
+      }
+ }
+ add_action('wp_trash_post', 'restrict_post_deletion', 1);
+ add_action('before_delete_post', 'restrict_post_deletion', 1);
+
+
+/**
  * Own excerpt making
  * @param $text
  * @param $numb
