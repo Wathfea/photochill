@@ -46,7 +46,7 @@ var TG = function ($) {
                         obj.title = attachment[title_field];
                     if (caption_field != 'none')
                         obj.description = attachment[caption_field];
-                    
+
                     obj.imagePath = attachment.url;
 
                     if (attachment.sizes.thumbnail)
@@ -55,7 +55,7 @@ var TG = function ($) {
                     if (attachment.sizes.full)
                         obj.altImagePath = attachment.sizes.full.url;
 
-					
+
 	                images.push(obj);
                 });
 
@@ -77,7 +77,7 @@ var TG = function ($) {
 		delete_image: function (id) {
 			TG.show_loading();
 			$.post(ajaxurl, {
-                action: 'modula_delete_image',                
+                action: 'modula_delete_image',
                 Modula: $('#Modula').val(),
                 id: id
             }, function () {
@@ -127,7 +127,7 @@ var TG = function ($) {
                     TG.show_loading();
                     $.post(ajaxurl, data, function () {
                         $item.remove();
-                        TG.hide_loading();                        
+                        TG.hide_loading();
                     });
                 });
 
@@ -135,7 +135,7 @@ var TG = function ($) {
                     $(this).toggleClass("checked");
                     $(this).parents(".item:first").toggleClass("selected");
                 });
-                
+
                 TG.hide_loading();
             });
 		},
@@ -156,7 +156,7 @@ var TG = function ($) {
                 error: function(a,b,c) {
                     TG.hide_loading();
                 },
-                success: function(r) { 
+                success: function(r) {
                     if(r.success) {
                         TG.load_images();
                     } else {
@@ -195,7 +195,7 @@ var TG = function ($) {
                 error: function(a,b,c) {
                     TG.hide_loading();
                 },
-                success: function(r) {                        
+                success: function(r) {
                     if(r.success) {
                         TG.load_images();
                         $("#add_image_form .img img").remove();
@@ -204,10 +204,10 @@ var TG = function ($) {
                 }
             });
 		},
-        init_gallery: function () {   
-	        
+        init_gallery: function () {
+
         },
-        save_gallery: function() {         
+        save_gallery: function() {
             var data = {};
             data.action = 'modula_save_gallery';
 
@@ -217,7 +217,7 @@ var TG = function ($) {
 
             if(parseInt(data.gridCellSize) < 2)
                 data.gridCellSize = 2;
-            
+
             if(data.galleryName == "") {
                 var p = $("<div title='Attention'>Insert a name for the gallery</div>").dialog({
                     modal: true,
@@ -251,13 +251,13 @@ var TG = function ($) {
                 }
             });
         },
-		bind: function () {	            
-            
+		bind: function () {
+
             $('.field .text .preview .panel').hide();
             $('.field .text .preview .panel-' + $('.field .text .select-effect').val()).fadeIn(2000);
 
             $('.field .text .select-effect').on('change', function(){
-                var currentEffect = $(this).val();                
+                var currentEffect = $(this).val();
                 $('.field .text .preview .panel').hide();
                 $('.field .text .preview .panel-' + currentEffect).fadeIn(2000);
             })
@@ -270,7 +270,7 @@ var TG = function ($) {
                     $('html, body').animate({
                         scrollTop: $("#" + target).offset().top - 28
                     }, 1000);
-                }, 500);                
+                }, 500);
             });
 
                $('.import-export a').click(function(){
@@ -320,7 +320,7 @@ var TG = function ($) {
                     $('html, body').animate({
                         scrollTop: $("#" + target).offset().top - 28
                     }, 1000);
-                }, 500); 
+                }, 500);
               })
 
             $(".field .text .integer-only").keypress(function(e){
@@ -344,7 +344,7 @@ var TG = function ($) {
                 jQuery.post(ajaxurl, data, function(id){
                     $('#name').val("");
                     $('#description').val("");
-                  
+
                     $_success = $('#success');
 
                     $_success.find(".code").val("[Modula id='" + id + "']");
@@ -387,19 +387,19 @@ var TG = function ($) {
                 $('#item-title', panel).html($('#img-title', $item).val());
                 $("#item-description", panel).val($("pre", $item).html());
                 $(".copy", $item).clone().appendTo(panel);
-                
+
                 $("body").append("<div class='overlay' style='display:none' />");
                 $(".overlay").fadeIn();
                 panel.appendTo("body").fadeIn();
 
                 var link = $item.find("[name=link]").val();
-                
+
                 $("[name=halign]", panel).val($("[name=halign]", $item).val());
                 $("[name=valign]", panel).val($("[name=valign]", $item).val());
 
                 $(".buttons a", panel).click(function (e) {
                     e.preventDefault();
-                    
+
                     switch($(this).data("action")) {
                         case "save":
                             $('#wpbody-content').removeClass('dark-content');
@@ -424,11 +424,11 @@ var TG = function ($) {
                                     console.log(a,b,c);
                                     TG.hide_loading();
                                 },
-                                success: function(r) {    
+                                success: function(r) {
                                     TG.hide_loading();
                                     TG.load_images();
                                 }
-                            });                            
+                            });
                             break;
                         case "cancel":
                             $('#wpbody-content').removeClass('dark-content');
@@ -456,7 +456,7 @@ var TG = function ($) {
                 }, 1000);
                 $(this).get(0).selectedIndex = 0;
             });
-            
+
             $("body").on("click", "[name=click_action]", function () {
                 if($(this).val() == "url") {
                     $(this).siblings("[name=url]").get(0).disabled = false;
@@ -498,30 +498,30 @@ var TG = function ($) {
 	                        var $sizes = $(".current-image-size").clone(false);
 	                        $sizes.removeClass("current-image-size");
 	                        $(".panel .text", $bulk).append($sizes);
-	                        
+
 	                        $(".cancel", $bulk).unbind("click").click(function (e) {
 	                            e.preventDefault();
 	                            $(".panel", $bulk).slideUp();
 	                        });
-	
+
 	                        $(".proceed", $bulk).unbind("click").click(function (e) {
 	                            e.preventDefault();
 	                            $(".panel", $bulk).slideUp();
-	                            
+
 	                            var data = {
                                     action: 'modula_resize_images',
                                     Modula: $('#Modula').val(),
                                     size: $sizes.val(),
                                     id: selected.join(",")
                                 };
-                                
+
                                 TG.show_loading();
                                 $.post(ajaxurl, data, function () {
                                     TG.load_images();
-                                    TG.hide_loading();                        
+                                    TG.hide_loading();
                                 });
 	                        });
-	                        
+
 	                        $(".panel", $bulk).slideDown();
 	                    }
                         break;
@@ -555,7 +555,7 @@ var TG = function ($) {
                                 TG.show_loading();
                                 $.post(ajaxurl, data, function () {
                                     $("#images .item.selected").remove();
-                                    TG.hide_loading();                        
+                                    TG.hide_loading();
                                 });
                             });
 
@@ -607,7 +607,7 @@ var TG = function ($) {
             $(".open-media-panel").on("click", function() {
 
                 var currentImageSize = $('.current-image-size').val();
-                
+
                 tgm_media_frame = wp.media.frames.tgm_media_frame = wp.media({
                     multiple: true,
                     library: {
@@ -620,14 +620,14 @@ var TG = function ($) {
 
                 tgm_media_frame.on('select', function() {
                     var selection = tgm_media_frame.state().get('selection');
-                    var images = [];                    
+                    var images = [];
                     selection.map( function( attachment ) {
                         attachment = attachment.toJSON();
-                        
-                        var obj = {                            
+
+                        var obj = {
                             imageId: attachment.id
                         };
-                        
+
                         if(modula_wp_caption_field == 'title')
                         	obj.description = attachment.title;
                         if(modula_wp_caption_field == 'description')
@@ -650,7 +650,7 @@ var TG = function ($) {
 
                         if(attachment.sizes.full)
                             obj.altImagePath = attachment.sizes.full.url;
-							
+
                         images.push(obj);
 
                         if(typeof attachment.sizes[currentImageSize] !== "undefined")
@@ -663,7 +663,7 @@ var TG = function ($) {
 
                         }
 
-                    });                     
+                    });
 
                     var data = {
                         action : 'modula_add_image',
@@ -683,7 +683,7 @@ var TG = function ($) {
                             TG.hide_loading();
                             alert("error adding images");
                         },
-                        success: function(r) {                        
+                        success: function(r) {
                             if(r.success) {
                                 TG.hide_loading();
                                 TG.load_images();
@@ -739,9 +739,9 @@ var NewGalleryWizard = function($) {
                         $fs = $fs.filter("[data-branch=" + branch + "]");
                     }*/
                     $fs.show();
-					
+
                     if ($fs.data("save")) {
-                        $('.prev').css("visibility","visible");                        
+                        $('.prev').css("visibility","visible");
                         $(this).text("Save");
                         if (branch == 'images') {
                             $(".select-images").show();
@@ -751,27 +751,27 @@ var NewGalleryWizard = function($) {
                         } else if(branch == 'posts') {
                             $(".select-images").hide();
                             $("[name=enc_images]").val("");
-                            
+
                             var categories = [];
                             $("[name=_post_categories]:checked").each(function() {
                                 categories.push(this.value);
                             });
                             $("[name=post_categories]").val(categories.join(','));
-                            
+
                             var tags = [];
                             $("[name=_post_tags]:checked").each(function() {
                                 tags.push(this.value);
-                            });                            
+                            });
                             $("[name=post_tags]").val(tags.join(','));
                         } else {
                             $(".select-images").hide();
                             $("[name=enc_images]").val("");
-                            
+
                             var categories = [];
                             $("[name=_woo_categories]:checked").each(function() {
                                 categories.push(this.value);
                             });
-                            $("[name=woo_categories]").val(categories.join(','));                            
+                            $("[name=woo_categories]").val(categories.join(','));
                         }
                     } else {
                         $(this).text("Next");
@@ -815,13 +815,13 @@ var NewGalleryWizard = function($) {
                 var size = $_wizard.find("[name=def_imgsize]").val();
                 var title_field = $("[name=ftg_wp_field_title]").val();
                 var caption_field = $("[name=ftg_wp_field_caption]").val();
-                TG.choose_images(title_field, caption_field, function(images) {	                
+                TG.choose_images(title_field, caption_field, function(images) {
 					var delta = Math.pow(2, 4) + Math.pow(2, 2);
 					var prev = [];
 					if($("[name=enc_images]").val())
 						JSON.parse($("[name=enc_images]").val());
 					var curr = prev.concat(images).slice(0, delta);
-					
+
                     $("[name=enc_images]").val(JSON.stringify(curr));
 					$_wizard.find(".images").empty();
                     $.each(curr, function() {
@@ -830,14 +830,14 @@ var NewGalleryWizard = function($) {
                         $_tile.data('img', this);
                         $_tile.append("<a class='btn-floating waves-effect waves-light red del'><i class='mdi-content-clear'></i></a>");
                         $_tile.append('<img src="' + this.thumbnail + '" />');
-						
+
                         $_wizard.find(".images").append($_tile);
 
                         $_tile.find(".del").click(function() {
                             $(this).parents(".tile").fadeOut(200, function() {
                                 $(this).remove();
                             });
-                        });	                    
+                        });
                     });
 
                 });
@@ -853,7 +853,7 @@ var NewGalleryWizard = function($) {
             });
         },
         save: function() {
-            
+
             var name = $('#name').val();
             var description = $('#description').val();
             var images = $('[name=enc_images]').val();
@@ -886,7 +886,7 @@ var NewGalleryWizard = function($) {
                     id = $.trim(id);
                     $('#name').val("");
                     $('#description').val("");
-                      
+
                     $_success = $('#success');
                     $_success.find(".code").val("[Modula id='" + id + "']");
                     $_success.find(".gallery-name").text(name);
@@ -1040,7 +1040,7 @@ jQuery(function () {
 
     jQuery("a[href$=modula-gallery-upgrade]").addClass('modula-jump-pro-menu').click(function (e) {
 	    e.preventDefault();
-	    
+
 	    location.href = "http://modula.greentreelabs.net/#buy";
     })
 });

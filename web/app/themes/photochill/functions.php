@@ -37,6 +37,7 @@ if ( ! function_exists( 'pc_setup' ) ) :
         // Enable support for Post Thumbnails on posts and pages.
         add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 600, 350, true );
+        set_post_thumbnail_size( 500, 500, false );
 
         // This theme uses wp_nav_menu()
         register_nav_menus( [
@@ -139,6 +140,45 @@ function register_mainphotos() {
 }
 
 /**
+ * Register our custom post type for Parallax Photos
+ */
+add_action( 'init', 'register_parallaxphotos' );
+function register_parallaxphotos() {
+
+    $args = array(
+        'labels'             => array(
+            'name'               => _x( 'Parallax képek', 'post type general name', 'photochill' ),
+            'singular_name'      => _x( 'Kép', 'post type singular name', 'photochill' ),
+            'menu_name'          => _x( 'Parallax képek', 'admin menu', 'photochill' ),
+            'name_admin_bar'     => _x( 'Parallax képek', 'add new on admin bar', 'photochill' ),
+            'add_new'            => _x( 'Új', 'About', 'photochill' ),
+            'add_new_item'       => __( 'Új', 'photochill' ),
+            'new_item'           => __( 'Új kép', 'photochill' ),
+            'edit_item'          => __( 'Kép szerkesztése', 'photochill' ),
+            'view_item'          => __( 'Kép megtekintése', 'photochill' ),
+            'all_items'          => __( 'Összes elem', 'photochill' ),
+            'search_items'       => __( 'Keresés', 'photochill' ),
+            'parent_item_colon'  => __( 'Szülő:', 'photochill' ),
+            'not_found'          => __( 'Nem található.', 'photochill' ),
+            'not_found_in_trash' => __( 'Nem található a kukában.', 'photochill' )
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'parallaxphotos' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail' )
+    );
+
+    register_post_type( 'parallaxphotos', $args );
+}
+
+/**
  * Add featured image in admin list
  */
  function custom_columns( $columns ) {
@@ -151,7 +191,7 @@ function register_mainphotos() {
       );
      return $columns;
  }
- add_filter('manage_mainphotos_posts_columns' , 'custom_columns');
+ add_filter('manage_parallaxphotos_posts_columns' , 'custom_columns');
 
 /**
  * Register the columns and add the thumbnail for the feauter image column.
@@ -171,7 +211,7 @@ function register_mainphotos() {
  * @return [type]          [description]
  */
  function restrict_post_deletion($post_ID){
-      $restricted_ements = array(45,51);
+      $restricted_ements = array(45,51,92,93);
       if(in_array($post_ID, $restricted_ements)){
           wp_redirect(admin_url('index.php'));
           exit;

@@ -98,27 +98,28 @@ header #navbar-brand span {
     padding-top:64px;
 }
 
-.parallax-bg {
+.parallax {
     padding:0;
+    overflow:hidden;
 }
 
-.parallax {
-    background-image:url('../../images/big-bg.jpg');
+.parallax-top {
     background-repeat:no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height:500px;
+    height:700px;
     padding:70px 0 20px 0;
+    transform-style: inherit;
+    transform: translateZ(-10px) scale(1.03);
 }
 
-.parallax-bg2 {
-    padding:0;
+.background, .background:before {
+  background: 50% 50% / cover;
 }
 
-.parallax2 {
-    background-image:url('../../images/wedding.jpg');
+.parallax-bottom {
     background-repeat:no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -155,6 +156,25 @@ header #navbar-brand span {
     border:0;
     border-bottom:1px solid #DFDFDF;
     padding:4px 0;
+}
+
+.modula .items .item:hover img.pic {
+    /*-webkit-filter: contrast(200%);
+    transition: all 0.4s ease 0s;
+    filter: contrast(200%);*/
+}
+
+.modula .items .effect-pufrobo .jtg-social {
+    width: 100%;
+    bottom: 30px !important;
+    right: auto !important;
+    left: auto !important;
+    text-align: center !important;
+
+}
+
+.modula-icon-pinterest:before {
+    font-size: 35px;color: #B7071B !important;
 }
 
 input:focus, textarea:focus, keygen:focus, select:focus {
@@ -247,7 +267,7 @@ form .btn {
 }
 
 /* Inner Sites */
-.article {
+.article, .blog_posts {
     padding-top:25px;
     padding-bottom:25px;
 }
@@ -270,7 +290,18 @@ form .btn {
     background-color:#009d97;
     margin-top:10px;
 }
-
+figure.effect-winston a{
+    color:#FFF !important;
+    font-size:100% !important;
+}
+.hiddendate{
+    opacity: 0;
+    transition:opacity 0.3s ease 0.3s;
+    -webkit-transition:opacity 0.3s ease 0.3s;
+}
+figure.effect-winston:hover .hiddendate{
+    opacity:1;
+}
 .published-date, .createdby {
     font-style:italic;
     margin-bottom:5px;
@@ -394,6 +425,29 @@ aside .search-form input {
 
 #to_top_button{
     margin:15px 0;
+}
+
+
+/*wp caption*/
+.alignleft{float:left; margin-right:15px;margin-bottom:15px;}
+.alignright{float:right; margin-left:15px;margin-bottom:15px;}
+.aligncenter{display:block; margin:10px auto !important;}
+.wp-caption{
+	background-color: #F3F3F3;
+	border: 1px solid #DDDDDD;
+	border-radius: 3px 3px 3px 3px;
+	padding-top: 4px;
+	text-align: center;
+	margin: 15px;
+}
+.wp-caption img{
+	margin:0;
+}
+.wp-caption p.wp-caption-text{
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
 }
 
 @media screen and (max-width: 768px) and (orientation : landscape){

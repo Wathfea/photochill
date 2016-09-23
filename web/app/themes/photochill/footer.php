@@ -17,6 +17,7 @@
 				</div>
 			</footer>
 		<!--wordpress footer-->
+		<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 		<?php wp_footer(); ?>
 	</body>
 </html>

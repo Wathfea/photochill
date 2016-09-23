@@ -8,17 +8,15 @@
                 while (have_posts()) : the_post();
                     setup_postdata($post);
                     $meta =  get_post_meta($post->ID , 'Készült');
+
                     ?>
                     <figure class="effect-winston">
                         <img src="<?php the_post_thumbnail_url(array(480, 360)); ?>" />
                         <figcaption>
-                            <!--<h2 class="archive_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>-->
-                            <h2 class="archive_title"><?php the_title(); ?></h2>
-                            <p>
-<!--                                <a href="#"><i class="fa fa-fw fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-fw fa-twitter"></i></a>
-                                <a href="<?php the_permalink(); ?>"><i class="fa fa-fw fa-eye"></i></a>-->
-                                <a href="<?php the_permalink(); ?>"><?php echo $meta[0]; ?></a>
+                            <h2 class="archive_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <!-- <h2 class="archive_title"><?php the_title(); ?></h2> -->
+                            <p class="hiddendate">
+                                <a href="<?php the_permalink(); ?>"><?php echo empty($meta[0]) ? the_date() : $meta[0];  ?></a>
                             </p>
                         </figcaption>
                     </figure>
@@ -56,7 +54,7 @@
         </div>
     </div>
     <div class="col-xs-3">
-<?php dynamic_sidebar('sidebar-right'); ?>
+        <?php dynamic_sidebar('sidebar-right'); ?>
     </div>
 </div>
 <?php get_footer(); ?>

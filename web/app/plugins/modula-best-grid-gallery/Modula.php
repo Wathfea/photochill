@@ -558,6 +558,7 @@ if (!class_exists("ModulaLite"))
 			die();
 		}
 
+		// MOD BY DAVID
 		public function add_image()
 		{
 			if(check_admin_referer('Modula','Modula'))
@@ -569,8 +570,8 @@ if (!class_exists("ModulaLite"))
 				$enc_images = stripslashes($_POST["enc_images"]);
 				$images = json_decode($enc_images);
 
-				$d = 18 + log10(100);
-				$images = array_slice($images, 0, $d - count($prev));
+				//$d = 18 + log10(100);
+				//$images = array_slice($images, 0, $d - count($prev));
 				$images = ModulaLiteTools::check_and_resize( $images, $this->loadedData->img_size );
 				$result = $this->ModulaDB->addImages($gid, $images);
 
@@ -1208,6 +1209,11 @@ class ModulaLiteTools
 		$path_parts = pathinfo($file);
 		$filename = $path_parts['dirname'] . "/" . $path_parts['filename'] . "-" . $img_size . "x" . $img_size . "." . $path_parts["extension"];
 
+		// if(file_exists( $filename )) {
+		// 	unlink($filename);
+		// } else {
+		// 	$editor->save($filename);
+		// }
 		if(! file_exists( $filename ))
 			$editor->save($filename);
 		return basename( $filename );

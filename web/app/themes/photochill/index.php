@@ -5,9 +5,12 @@
  * @package photochill
  */
 get_header();
+
+$parallaxTopImg = get_post(92);
+$image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID), 'single-post-thumbnail');
 ?>
-<div class="container-fluid parallax-bg">
-    <div class="parallax text-center">
+<div class="container-fluid parallax">
+    <div class="parallax-top text-center"  style="background-image: url(<?php echo $image[0]; ?>);">
         <img src="<?php echo get_bloginfo('template_url') ?>/images/logo.png" />
         <h1><?php echo get_bloginfo('name'); ?></h1>
         <h2><?php echo get_bloginfo('description'); ?></h2>
@@ -19,7 +22,7 @@ get_header();
         <?php
         $aboutImgPost = get_post(51);
         $image = wp_get_attachment_image_src(get_post_thumbnail_id($aboutImgPost->ID), 'single-post-thumbnail');
-        ?>        
+        ?>
         <div class="col-md-6 nopadding about-image" style="background-image: url(<?php echo $image[0]; ?>);">
         </div>
         <div class="col-md-6">
@@ -39,12 +42,16 @@ get_header();
 
 <div class="container-fluid gallery-home">
     <div class="row">
-        <?php echo do_shortcode('[FinalTilesGallery id="1"]'); ?>
+        <?php echo do_shortcode('[Modula id="1"]'); ?>
     </div>
 </div>
 
-<div class="container-fluid parallax-bg2">
-    <div class="parallax2 text-center">
+<?php
+$parallaxBottomImg = get_post(93);
+$image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxBottomImg->ID), 'single-post-thumbnail');
+?>
+<div class="container-fluid parallax">
+    <div class="parallax-bottom text-center" style="background-image: url(<?php echo $image[0]; ?>);">
     </div>
 </div>
 
@@ -59,7 +66,7 @@ get_header();
         <?php
         $contactImgPost = get_post(45);
         $image = wp_get_attachment_image_src(get_post_thumbnail_id($contactImgPost->ID), 'single-post-thumbnail');
-        ?>        
+        ?>
         <div class="col-md-6 nopadding contact-image" style="background-image: url(<?php echo $image[0]; ?>);">
         </div>
     </div>
