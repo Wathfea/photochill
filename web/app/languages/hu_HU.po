@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the 4.6.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-08-17 06:26:49+0000\n"
+"PO-Revision-Date: 2016-09-07 19:31:42+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -80,7 +80,7 @@ msgstr "Időcsúszka"
 #. translators: %1: number of seconds (30 by default)
 #: wp-includes/script-loader.php:354
 msgid "Skip back %1 seconds"
-msgstr "Visszalépés %1 másodpercet"
+msgstr "Visszalépés %1 másodperccel"
 
 #: wp-includes/script-loader.php:355
 msgid "Video Player"
@@ -297,7 +297,7 @@ msgstr "Ma"
 msgid "Edit Menu"
 msgstr "Menü szerkesztése"
 
-#: wp-includes/wp-db.php:1782 wp-includes/wp-db.php:1788
+#: wp-includes/wp-db.php:1792 wp-includes/wp-db.php:1798
 msgid "Unable to retrieve the error message from MySQL"
 msgstr "Nem lehet lekérni a MySQL hibaüzenetet"
 
@@ -598,11 +598,11 @@ msgstr "Válasszunk logót"
 
 #. translators: 1: PHP class name, 2: PHP parent class name, 3: version number,
 #. 4: __construct() method
-#: wp-includes/functions.php:3765
+#: wp-includes/functions.php:3766
 msgid "The called constructor method for %1$s in %2$s is <strong>deprecated</strong> since version %3$s! Use %4$s instead."
 msgstr "A meghívott %1$s felépítő metódusa %2$s osztályban <strong>elavult</strong> %3$s óta. Használjuk inkább %4$s hívást."
 
-#: wp-includes/functions.php:5122
+#: wp-includes/functions.php:5123
 msgid "Close dialog"
 msgstr "Párbeszéd bezárása"
 
@@ -733,11 +733,11 @@ msgid "https://codex.wordpress.org/Debugging_a_WordPress_Network"
 msgstr "https://codex.wordpress.org/Debugging_a_WordPress_Network"
 
 #. translators: %s: Codex URL
-#: wp-includes/functions.php:3992
+#: wp-includes/functions.php:3993
 msgid "Please see <a href=\"%s\">Debugging in WordPress</a> for more information."
 msgstr "Bővebb információ a <a href=\"%s\">Hibakeresés a WordPress-ben</a> helyen."
 
-#: wp-includes/functions.php:3993
+#: wp-includes/functions.php:3994
 msgid "https://codex.wordpress.org/Debugging_in_WordPress"
 msgstr "https://codex.wordpress.org/Debugging_in_WordPress"
 
@@ -946,66 +946,66 @@ msgstr "Honlap nyelve:"
 msgid "Author:"
 msgstr "Szerző:"
 
-#: wp-includes/wp-db.php:1575
+#: wp-includes/wp-db.php:1585
 msgid "Are you sure that you have typed the correct hostname?"
 msgstr "A kiszolgáló neve helyesen lett megadva?"
 
-#: wp-includes/wp-db.php:1576 wp-includes/wp-db.php:1679
+#: wp-includes/wp-db.php:1586 wp-includes/wp-db.php:1689
 msgid "Are you sure that the database server is running?"
 msgstr "Üzemel az adatbázis-szerver?"
 
 #. translators: %s: support forums URL
-#: wp-includes/wp-db.php:1581 wp-includes/wp-db.php:1685
+#: wp-includes/wp-db.php:1591 wp-includes/wp-db.php:1695
 msgid "If you&#8217;re unsure what these terms mean you should probably contact your host. If you still need help you can always visit the <a href=\"%s\">WordPress Support Forums</a>."
 msgstr "Amennyiben bizonytalanok vagyunk abban, hogy mit jelentenek ezek a kifejezések, lépjünk kapcsolatba a tárhely-szolgáltatónkkal. Segítségért bármikor felkereshetjük a <a href=\"%s\">WordPress Támogatói Fórum</a> oldalát."
 
-#: wp-includes/wp-db.php:1670
+#: wp-includes/wp-db.php:1680
 msgid "Error reconnecting to the database"
 msgstr "Nem sikerült újrakapcsolódni az adatbázishoz."
 
 #. translators: %s: database host
-#: wp-includes/wp-db.php:1674
+#: wp-includes/wp-db.php:1684
 msgid "This means that we lost contact with the database server at %s. This could mean your host&#8217;s database server is down."
 msgstr "Ez azt jelenti, hogy a kapcsolat megszakadt az adatbázis kiszolgálóval %s-kor. Ennek egyik lehetséges oka, hogy az adatbázis kiszolgáló áll."
 
-#: wp-includes/wp-db.php:1680
+#: wp-includes/wp-db.php:1690
 msgid "Are you sure that the database server is not under particularly heavy load?"
 msgstr "Biztosak vagyunk benne, hogy az adatbázis kiszolgáló nincs erős megterhelés alatt?"
 
 #. translators: 1: wp-config.php. 2: database host
-#: wp-includes/wp-db.php:1568
+#: wp-includes/wp-db.php:1578
 msgid "This either means that the username and password information in your %1$s file is incorrect or we can&#8217;t contact the database server at %2$s. This could mean your host&#8217;s database server is down."
 msgstr "Ez azt jelenti, hogy a %1$s fájlban megadott felhasználónév és jelszó nem megfelelő, vagy nem lehet a(z) %2$s adatbázis-szerverrel kapcsolatot létesíteni, mert a tárhely-szolgáltató által üzemeltetett adatbázis-szerver üzemen kívül van."
 
-#: wp-includes/wp-db.php:1574
+#: wp-includes/wp-db.php:1584
 msgid "Are you sure you have the correct username and password?"
 msgstr "A felhasználónév és a jelszó megfelelő?"
 
 #. translators: %s: support forums URL
-#: wp-includes/wp-db.php:1113
+#: wp-includes/wp-db.php:1123
 msgid "If you don&#8217;t know how to set up a database you should <strong>contact your host</strong>. If all else fails you may find help at the <a href=\"%s\">WordPress Support Forums</a>."
 msgstr "Amennyiben nem vagyunk tisztában azzal, hogy miképpen kell egy adatbázist létrehozni, beállítani, akkor <strong>lépjünk kapcsolatba saját tárhely-szolgáltatónkkal</strong>.   Amennyiben bizonytalanok vagyunk abban, hogy mit jelentenek ezek a kifejezések, lépjünk kapcsolatba a tárhely-szolgáltatónkkal. Segítségért bármikor felkereshetjük a <a href=\"%s\">WordPress Támogatói Fórum</a> oldalát. "
 
-#: wp-includes/wp-db.php:1085
+#: wp-includes/wp-db.php:1095
 msgid "Can&#8217;t select database"
 msgstr "Nem lehetséges kiválasztani az adatbázist."
 
 #. translators: %s: database name
-#: wp-includes/wp-db.php:1089
+#: wp-includes/wp-db.php:1099
 msgid "We were able to connect to the database server (which means your username and password is okay) but not able to select the %s database."
 msgstr "Az adatbázis-szerverhez sikerült kapcsolódni (am azt jelenti, hogy a megadott felhasználónév és jelszó megfelelő), de nem találjuk a(z) %s adatbázist."
 
-#: wp-includes/wp-db.php:1094
+#: wp-includes/wp-db.php:1104
 msgid "Are you sure it exists?"
 msgstr "Biztosan létezik?"
 
 #. translators: 1: database user, 2: database name
-#: wp-includes/wp-db.php:1098
+#: wp-includes/wp-db.php:1108
 msgid "Does the user %1$s have permission to use the %2$s database?"
 msgstr "Biztosan van %1$s felhasználónak joga, hogy %2$s nevű adatbázist használja?"
 
 #. translators: %s: database name
-#: wp-includes/wp-db.php:1105
+#: wp-includes/wp-db.php:1115
 msgid "On some systems the name of your database is prefixed with your username, so it would be like <code>username_%1$s</code>. Could that be the problem?"
 msgstr "Előfordulnak olyan rendszerek, ahol az adatbázis előtagja a felhasználónév, például <code>username_%1$s</code>. Lehetséges, hogy ez a probléma?"
 
@@ -1190,7 +1190,7 @@ msgstr "A felhasználói név csak az angol abc karaktereit (ékezetmentes) és 
 #: wp-includes/class-wp-locale.php:185
 msgctxt "July abbreviation"
 msgid "Jul"
-msgstr "jul"
+msgstr "Júl"
 
 #. translators: three-letter abbreviation of the month
 #: wp-includes/class-wp-locale.php:186
@@ -1202,7 +1202,7 @@ msgstr "aug"
 #: wp-includes/class-wp-locale.php:187
 msgctxt "September abbreviation"
 msgid "Sep"
-msgstr "sze"
+msgstr "Sze"
 
 #. translators: three-letter abbreviation of the month
 #: wp-includes/class-wp-locale.php:188
@@ -1226,7 +1226,7 @@ msgstr "feb"
 #: wp-includes/class-wp-locale.php:181
 msgctxt "March abbreviation"
 msgid "Mar"
-msgstr "már"
+msgstr "Már"
 
 #. translators: three-letter abbreviation of the month
 #: wp-includes/class-wp-locale.php:182
@@ -1290,7 +1290,7 @@ msgstr "k"
 
 #: wp-includes/link-template.php:2819
 msgid "Newer comments"
-msgstr "Újabb hozzászólás"
+msgstr "Újabb hozzászólások"
 
 #: wp-includes/general-template.php:2043
 msgid "Posts published on %s"
@@ -1298,7 +1298,7 @@ msgstr "Közzétéve: %s"
 
 #: wp-includes/link-template.php:2818
 msgid "Older comments"
-msgstr "Korábbi hozzászólás"
+msgstr "Korábbi hozzászólások"
 
 #: wp-includes/embed.php:1005
 msgid "Copy and paste this code into your site to embed"
@@ -1352,7 +1352,7 @@ msgstr "Sajnos, a rendelkezésre álló tárhely elfogyott."
 #: wp-includes/class-wp-xmlrpc-server.php:3364
 #: wp-includes/class-wp-xmlrpc-server.php:3431
 msgid "Sorry, you are not allowed to moderate or edit this comment."
-msgstr "Elnézést, nincs megfelelő jogosultság ennek a hozzászólásnak a moderálásához, vagy szerkesztéséhez."
+msgstr "Sajnos, nincs megfelelő jogosultság ennek a hozzászólásnak a moderálásához vagy szerkesztéséhez."
 
 #: wp-includes/class-wp-customize-widgets.php:732
 msgid "There are no widget areas currently rendered in the preview. Navigate in the preview to a template that makes use of a widget area in order to access its widgets here."
@@ -1543,7 +1543,7 @@ msgstr "Hozzáadás a menühöz: %1$s (%2$s)"
 msgid "When starting a new paragraph with one of these formatting shortcuts followed by a space, the formatting will be applied automatically. Press Backspace or Escape to undo."
 msgstr "Amikor új bekezdést nyitunk, bármely formázási gyorsbillentyűvel, amelyet egy szóköz követ, akkor a formázás automatikusan érvényesítésre kerül. Nyomjuk meg a visszatörlést, vagy az Esc gombot a visszavonáshoz."
 
-#: wp-includes/wp-db.php:1366 wp-includes/wp-db.php:1383
+#: wp-includes/wp-db.php:1376 wp-includes/wp-db.php:1393
 msgid "WordPress database error:"
 msgstr "WordPress adatbázis hiba:"
 
@@ -1627,7 +1627,7 @@ msgid "Preformatted"
 msgstr "Előformázott"
 
 #. translators: 1: PHP class name, 2: version number, 3: __construct() method
-#: wp-includes/functions.php:3769
+#: wp-includes/functions.php:3770
 msgid "The called constructor method for %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "A(z) %1$s meghívott szerkesztő metódus a %2$s verzió óta <strong>elavult</strong>. Helyette a %3$s használata javasolt."
 
@@ -2034,7 +2034,7 @@ msgstr "Hivatkozás kapcsolati minősége (XFN)"
 msgid "CSS Classes"
 msgstr "CSS osztályok"
 
-#: wp-includes/class-wp-editor.php:1431
+#: wp-includes/class-wp-editor.php:1439
 #: wp-includes/customize/class-wp-customize-nav-menu-item-control.php:105
 #: wp-includes/media-template.php:1001
 msgid "Open link in a new tab"
@@ -2381,7 +2381,7 @@ msgid "1 Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "1 hozzászólás a(z)<span class=\"screen-reader-text\"> %s</span> bejegyzéshez"
 
 #: wp-includes/class-wp-customize-nav-menus.php:788
-#: wp-includes/class-wp-editor.php:1426 wp-includes/media-template.php:813
+#: wp-includes/class-wp-editor.php:1434 wp-includes/media-template.php:813
 msgid "Link Text"
 msgstr "Hivatkozás szövege"
 
@@ -2461,7 +2461,7 @@ msgstr "Egy tömböt kell átadni típusokkal."
 
 #. translators: %s: database access abstraction class, usually wpdb or a class
 #. extending wpdb
-#: wp-includes/wp-db.php:1165
+#: wp-includes/wp-db.php:1175
 msgid "%s must set a database connection for use with escaping."
 msgstr "%s szükség van egy adatbázis kapcsolat beállítására, a veszélyes karakterek elkerülésére."
 
@@ -2790,7 +2790,7 @@ msgstr "A böngésző nem támogatja a vágólaphoz történő közvetlen kapcso
 msgid "Read more..."
 msgstr "Bővebben..."
 
-#: wp-includes/class-wp-editor.php:1452
+#: wp-includes/class-wp-editor.php:1460
 msgid "Search or use up and down arrow keys to select an item."
 msgstr "Keresés, vagy használjuk a fel- és le nyilakat egy tétel kiválasztásához."
 
@@ -2909,12 +2909,12 @@ msgstr "<strong>HIBA</strong>: A hozzászólást nem sikerült elmenteni, prób�
 #. translators: %s: header width in pixels
 #: wp-includes/customize/class-wp-customize-header-image-control.php:178
 msgid "While you can crop images to your liking after clicking <strong>Add new image</strong>, your theme recommends a header width of %s pixels."
-msgstr "Az <strong>Új kép hozzáadása</strong> feliratra történő kattintás után,  a képek kívánt méretre vágása során, a sablonunk legalább %s pixel méretű fejrész szélességet javasol."
+msgstr "Az <strong>Új kép hozzáadása</strong> feliratra történő kattintás után, a képek kívánt méretre vágása során, a sablonunk legalább %s pixel méretű fejrész szélességet javasol."
 
 #. translators: %s: header height in pixels
 #: wp-includes/customize/class-wp-customize-header-image-control.php:183
 msgid "While you can crop images to your liking after clicking <strong>Add new image</strong>, your theme recommends a header height of %s pixels."
-msgstr "Az <strong>Új kép hozzáadása</strong> feliratra történő kattintás után,  a képek kívánt méretre vágása során, a sablonunk legalább %s pixel méretű fejrész magasságot javasol."
+msgstr "Az <strong>Új kép hozzáadása</strong> feliratra történő kattintás után, a képek kívánt méretre vágása során, a sablonunk legalább %s pixel méretű fejrész magasságot javasol."
 
 #. translators: %s: the site/panel title in the Customizer
 #: wp-includes/class-wp-customize-panel.php:372
@@ -2947,7 +2947,7 @@ msgstr "Ha Microsoft Wordből szeretnénk szöveget beilleszteni, próbáljuk me
 #. translators: %s: header size in pixels
 #: wp-includes/customize/class-wp-customize-header-image-control.php:173
 msgid "While you can crop images to your liking after clicking <strong>Add new image</strong>, your theme recommends a header size of %s pixels."
-msgstr "Bár, kedvünk szerinti méretű képet készíthetünk az <strong>Új hozzáadás</strong>-ra kattintással, a sablon a fejrészhez %s pixel széles képet ajánl."
+msgstr "Bár, kedvünk szerinti méretű képet készíthetünk az <strong>Új kép hozzáadása</strong>-ra kattintással, a sablon a fejrészhez %s pixel széles képet ajánl."
 
 #: wp-includes/class-wp-editor.php:1054
 msgid "Keyboard Shortcuts"
@@ -3291,7 +3291,7 @@ msgstr "Cella"
 #: wp-includes/class-wp-editor.php:976
 msgctxt "table header"
 msgid "Header"
-msgstr "Fejléc"
+msgstr "Fejrész"
 
 #: wp-includes/class-wp-editor.php:977
 msgctxt "table body"
@@ -3541,7 +3541,7 @@ msgstr "Hozzáadás a videó lejátszási listához"
 msgid "Invalid menu ID."
 msgstr "Hibás menü azonosító"
 
-#: wp-includes/wp-db.php:1281
+#: wp-includes/wp-db.php:1291
 msgid "The query argument of %s must have a placeholder."
 msgstr "A lekérdezés %s paraméteréhez szükséges egy helykitöltő."
 
@@ -3586,8 +3586,8 @@ msgstr "Kulcsszavak"
 msgid "https://wordpress.org/"
 msgstr "https://hu.wordpress.org/"
 
-#: wp-includes/admin-bar.php:147 wp-includes/wp-db.php:1114
-#: wp-includes/wp-db.php:1582 wp-includes/wp-db.php:1686 wp-login.php:801
+#: wp-includes/admin-bar.php:147 wp-includes/wp-db.php:1124
+#: wp-includes/wp-db.php:1592 wp-includes/wp-db.php:1696 wp-login.php:801
 msgid "https://wordpress.org/support/"
 msgstr "http://kozosseg.wphu.org/"
 
@@ -3605,11 +3605,11 @@ msgstr "Javasolt fejrészek véletlenszerűen"
 
 #: wp-includes/customize/class-wp-customize-header-image-control.php:126
 msgid "Randomizing uploaded headers"
-msgstr "Feltöltött fejrészek összekeverése"
+msgstr "Feltöltött fejrészek véletlenszerűen"
 
 #: wp-includes/customize/class-wp-customize-header-image-control.php:128
 msgid "Randomizing suggested headers"
-msgstr "Ajánlott fejrészek összekeverése"
+msgstr "Véletlenszerűen ajánlott fejrészek"
 
 #: wp-includes/customize/class-wp-customize-header-image-control.php:140
 msgid "No image set"
@@ -4109,7 +4109,7 @@ msgstr "A megadott email cím helyes? A megadott email cím: %s. Amennyiben nem 
 msgid "The site you were looking for, %s, does not exist, but you can create it now!"
 msgstr "A keresett %s honlap nem található, de most létrehozhatunk egyet."
 
-#: wp-includes/functions.php:5135
+#: wp-includes/functions.php:5136
 msgid "The login page will open in a new window. After logging in you can close it and return to this page."
 msgstr "A bejelentkező oldal új ablakban fog megnyílni. Bejelentkezés után bezárható, majd visszatérhetünk erre az oldalra."
 
@@ -4139,7 +4139,7 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "Keresés"
 
-#: wp-includes/functions.php:5133 wp-includes/script-loader.php:461
+#: wp-includes/functions.php:5134 wp-includes/script-loader.php:461
 msgid "Session expired"
 msgstr "Lejárt a munkamenet"
 
@@ -5220,12 +5220,12 @@ msgstr "Támogató fórum"
 msgid "&hellip;"
 msgstr "&hellip;"
 
-#: wp-includes/functions.php:3642
+#: wp-includes/functions.php:3643
 msgid "Database Error"
 msgstr "Adatbázis hiba"
 
-#: wp-includes/functions.php:3646 wp-includes/ms-load.php:471
-#: wp-includes/wp-db.php:1564
+#: wp-includes/functions.php:3647 wp-includes/ms-load.php:471
+#: wp-includes/wp-db.php:1574
 msgid "Error establishing a database connection"
 msgstr "Hiba az adatbázis-kapcsolat létrehozása során"
 
@@ -5359,7 +5359,7 @@ msgstr "Eszköztár"
 msgid "Destination directory for file streaming does not exist or is not writable."
 msgstr "A fájl fogadására megjelölt célkönyvtár nem létezik, vagy nem írható."
 
-#: wp-includes/class-http.php:532
+#: wp-includes/class-http.php:535
 msgid "There are no HTTP transports available which can complete the requested request."
 msgstr "Nem érhető el olyan HTTP közvetítő szolgáltatás, amely végre tudná hajtani a lekérdezést."
 
@@ -5368,11 +5368,11 @@ msgctxt "post format"
 msgid "Format"
 msgstr "Formátum"
 
-#: wp-includes/class-wp-editor.php:1420
+#: wp-includes/class-wp-editor.php:1428
 msgid "Enter the destination URL"
 msgstr "A cél URL megadása,"
 
-#: wp-includes/class-wp-editor.php:1434
+#: wp-includes/class-wp-editor.php:1442
 msgid "Or link to existing content"
 msgstr " vagy hivatkozás létező tartalomhoz"
 
@@ -5396,11 +5396,11 @@ msgstr "A feltételes lekérdezési címkék nem működnek a lekérdezés futta
 msgid "The user is already active."
 msgstr "Ez a felhasználó már aktív."
 
-#: wp-includes/functions.php:3995
+#: wp-includes/functions.php:3996
 msgid "%1$s was called <strong>incorrectly</strong>. %2$s %3$s"
 msgstr "%1$s <strong>helytelenül került meghívásra</strong>. %2$s %3$s"
 
-#: wp-includes/functions.php:3990
+#: wp-includes/functions.php:3991
 msgid "(This message was added in version %s.)"
 msgstr "(Ez az üzenet a %s verzióban került hozzáadásra.)"
 
@@ -5432,7 +5432,7 @@ msgstr "Audió"
 msgid "Invalid post format"
 msgstr "Érvénytelen bejegyzés forma"
 
-#: wp-includes/class-wp-editor.php:1451
+#: wp-includes/class-wp-editor.php:1459
 msgid "No search term specified. Showing recent items."
 msgstr "Nem adtunk meg kifejezést. A legutóbbi elemek jelennek meg."
 
@@ -5908,7 +5908,7 @@ msgstr "Új %1$s honlap: %2$s"
 
 #: wp-includes/ms-functions.php:967
 msgid "The site is already active."
-msgstr "Ez a felhasználó már aktív."
+msgstr "Ez a honlap már bekapcsolva."
 
 #: wp-includes/class-wp-xmlrpc-server.php:3635
 #: wp-includes/class-wp-xmlrpc-server.php:3716
@@ -6387,11 +6387,11 @@ msgstr "A megadott URL nem létezik."
 msgid "Your PHP installation appears to be missing the MySQL extension which is required by WordPress."
 msgstr "Úgy tűnik, hogy hiányzik a MySQL kiterjesztés a PHP telepítéséből, pedig arra a WordPressnek szüksége van."
 
-#: wp-includes/wp-db.php:1352
+#: wp-includes/wp-db.php:1362
 msgid "WordPress database error %1$s for query %2$s made by %3$s"
 msgstr "WordPress adatbázis hiba %1$s a lekérdezésben %2$s készítette %3$s"
 
-#: wp-includes/wp-db.php:1354
+#: wp-includes/wp-db.php:1364
 msgid "WordPress database error %1$s for query %2$s"
 msgstr "WordPress adatbázis hiba %1$s a lekérdezésben %2$s"
 
@@ -6660,33 +6660,33 @@ msgstr "&laquo; Vissza"
 msgid "WordPress &rsaquo; Error"
 msgstr "WordPress &rsaquo; hiba"
 
-#: wp-includes/functions.php:3706 wp-includes/functions.php:3830
-#: wp-includes/functions.php:3945
+#: wp-includes/functions.php:3707 wp-includes/functions.php:3831
+#: wp-includes/functions.php:3946
 msgid "%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "%1$s <strong>használata nem támogatott</strong> a %2$s verzió óta! Ezt javasoljuk helyette: %3$s."
 
-#: wp-includes/functions.php:3708 wp-includes/functions.php:3832
-#: wp-includes/functions.php:3947
+#: wp-includes/functions.php:3709 wp-includes/functions.php:3833
+#: wp-includes/functions.php:3948
 msgid "%1$s is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s már <strong>használata nem támogatott</strong> a %2$s verzió óta, és nincs helyette javaslatunk."
 
-#: wp-includes/functions.php:3890
+#: wp-includes/functions.php:3891
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s"
 msgstr "%1$s meghívás <strong>használata nem támogatott</strong> lehetőség a %2$s verzió óta. %3$s"
 
-#: wp-includes/functions.php:3892
+#: wp-includes/functions.php:3893
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s meghívás <strong>használata nem támogatott</strong> lehetőség a %2$s verzió óta, és nincs helyette javaslatunk."
 
-#: wp-includes/functions.php:4484
+#: wp-includes/functions.php:4485
 msgid "Select a city"
 msgstr "Város kiválasztása"
 
-#: wp-includes/functions.php:4529 wp-includes/functions.php:4533
+#: wp-includes/functions.php:4530 wp-includes/functions.php:4534
 msgid "UTC"
 msgstr "UTC"
 
-#: wp-includes/functions.php:4537
+#: wp-includes/functions.php:4538
 msgid "Manual Offsets"
 msgstr "Eltérés kézi beállítása"
 
@@ -6789,7 +6789,7 @@ msgstr "Szürke"
 msgid "User has blocked requests through HTTP."
 msgstr "A HTTP alapú kérések blokkolásra kerültek."
 
-#: wp-includes/class-http.php:963 wp-includes/class-wp-http-curl.php:232
+#: wp-includes/class-http.php:966 wp-includes/class-wp-http-curl.php:232
 #: wp-includes/class-wp-http-curl.php:271
 msgid "Too many redirects."
 msgstr "Túl sok átirányítás."
@@ -6944,7 +6944,7 @@ msgstr "Nyomtatás"
 msgid "Insert/edit image"
 msgstr "Kép beszúrása/szerkesztése"
 
-#: wp-includes/class-wp-editor.php:936 wp-includes/class-wp-editor.php:1416
+#: wp-includes/class-wp-editor.php:936 wp-includes/class-wp-editor.php:1424
 #: wp-includes/script-loader.php:419
 msgid "Insert/edit link"
 msgstr "Hivatkozás beillesztés/szerkesztés"
@@ -7651,7 +7651,7 @@ msgstr "<strong>HIBA</strong>: A jelszó-mező üres."
 msgid "<strong>ERROR</strong>: Your account has been marked as a spammer."
 msgstr "<strong>HIBA</strong>: a felhasználói fiók spamnek lett megjelölve."
 
-#: wp-includes/functions.php:5134 wp-includes/user.php:280
+#: wp-includes/functions.php:5135 wp-includes/user.php:280
 msgid "Please log in again."
 msgstr "Ismételten be kell jelentkezni."
 
@@ -7659,7 +7659,7 @@ msgstr "Ismételten be kell jelentkezni."
 msgid "Sidebar %d"
 msgstr "Oldalsáv %d"
 
-#: wp-includes/wp-db.php:3197
+#: wp-includes/wp-db.php:3207
 msgid "<strong>ERROR</strong>: WordPress %1$s requires MySQL %2$s or higher"
 msgstr "<strong>HIBA</strong>: A WordPress %1$s futtatásához legalább MySQL %2$s, vagy magasabb verzió szükséges"
 
@@ -8011,7 +8011,7 @@ msgid "Website"
 msgstr "Honlap"
 
 #: wp-includes/admin-bar.php:736 wp-includes/class-wp-customize-widgets.php:418
-#: wp-includes/functions.php:3583
+#: wp-includes/functions.php:3584
 msgid "Widgets"
 msgstr "Widgetek"
 
@@ -8185,7 +8185,7 @@ msgid "Author"
 msgstr "Szerző"
 
 #: wp-includes/class-wp-customize-nav-menus.php:784
-#: wp-includes/class-wp-editor.php:1422
+#: wp-includes/class-wp-editor.php:1430
 #: wp-includes/customize/class-wp-customize-nav-menu-item-control.php:91
 #: wp-includes/media-template.php:371 wp-includes/media-template.php:550
 #: wp-includes/media.php:3351
@@ -8257,7 +8257,7 @@ msgstr "Hivatkozás-kategória szerkesztése"
 msgid "Update Category"
 msgstr "Kategória frissítése"
 
-#: wp-includes/class-wp-editor.php:1466 wp-includes/script-loader.php:421
+#: wp-includes/class-wp-editor.php:1474 wp-includes/script-loader.php:421
 msgid "Add Link"
 msgstr "Hivatkozás hozzáadása"
 
@@ -8345,7 +8345,7 @@ msgstr "Legutóbbi hozzászólások"
 msgid "Plugins"
 msgstr "Bővítmények"
 
-#: wp-includes/class-wp-editor.php:871 wp-includes/class-wp-editor.php:1463
+#: wp-includes/class-wp-editor.php:871 wp-includes/class-wp-editor.php:1471
 #: wp-includes/media.php:3355 wp-includes/script-loader.php:406
 #: wp-includes/script-loader.php:456 wp-includes/script-loader.php:531
 msgid "Cancel"
@@ -8538,7 +8538,7 @@ msgid "Dismiss"
 msgstr "Bezárás"
 
 #: wp-includes/admin-bar.php:810 wp-includes/admin-bar.php:811
-#: wp-includes/class-wp-editor.php:1438 wp-includes/media.php:3353
+#: wp-includes/class-wp-editor.php:1446 wp-includes/media.php:3353
 msgid "Search"
 msgstr "Keresés"
 
@@ -8573,7 +8573,7 @@ msgstr "E-mail cím: %s"
 msgid "Pages"
 msgstr "Oldalak"
 
-#: wp-includes/class-wp-editor.php:872 wp-includes/class-wp-editor.php:1417
+#: wp-includes/class-wp-editor.php:872 wp-includes/class-wp-editor.php:1425
 #: wp-includes/script-loader.php:261 wp-includes/script-loader.php:342
 #: wp-includes/script-loader.php:457 wp-includes/script-loader.php:951
 msgid "Close"
@@ -8657,7 +8657,7 @@ msgstr "Függőben lévő"
 msgid "Draft"
 msgstr "Vázlat"
 
-#: wp-includes/class-wp-editor.php:1365
+#: wp-includes/class-wp-editor.php:1373
 msgid "Y/m/d"
 msgstr "Y-m-d"
 
