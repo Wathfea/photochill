@@ -6,7 +6,7 @@
  */
 get_header();
 
-$parallaxTopImg = get_post(92);
+$parallaxTopImg = get_post(7);
 $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID), 'single-post-thumbnail');
 ?>
 <div class="container-fluid parallax">
@@ -17,10 +17,10 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID),
     </div>
 </div>
 
-<div class="container-fluid about-box">
+<div class="container-fluid about-box" id="aboutbox">
     <div class="row">
         <?php
-        $aboutImgPost = get_post(51);
+        $aboutImgPost = get_post(119);
         $image = wp_get_attachment_image_src(get_post_thumbnail_id($aboutImgPost->ID), 'single-post-thumbnail');
         ?>
         <div class="col-md-6 nopadding about-image" style="background-image: url(<?php echo $image[0]; ?>);">
@@ -28,7 +28,7 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID),
         <div class="col-md-6">
             <div class="col-md-5 home-textbox">
                 <?php
-                $about = get_post(7);
+                $about = get_post(18);
                 ?>
                 <h3 class="post_title"><?php echo $about->post_title; ?></h3>
                 <div>
@@ -41,13 +41,26 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID),
 </div>
 
 <div class="container-fluid gallery-home">
-    <div class="row">
-        <?php echo do_shortcode('[Modula id="1"]'); ?>
+    <div class="row" style="margin-top: 10px;">
+        <?php //echo do_shortcode('[Modula id="1"]'); ?>
+        <?php
+            $homeGallery = get_post(123);
+
+            $galleryEleemnts = get_post_gallery( $homeGallery->ID , false);
+            foreach( $galleryEleemnts['src'] as $src ) : ?>
+                <div class="col-xs-12 col-sm-4 text-center">
+                    <a href="<?php echo $src; ?>" data-lightbox="image-1">
+                        <img src="<?php echo $src; ?>" class="center-cropped" />
+                    </a>
+                </div>
+                <?php
+            endforeach;
+        ?>
     </div>
 </div>
 
 <?php
-$parallaxBottomImg = get_post(93);
+$parallaxBottomImg = get_post(12);
 $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxBottomImg->ID), 'single-post-thumbnail');
 ?>
 <div class="container-fluid parallax">
@@ -55,16 +68,16 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxBottomImg->I
     </div>
 </div>
 
-<div class="container-fluid contact-box">
+<div class="container-fluid contact-box" id="contactbox">
     <div class="row">
         <div class="col-md-6">
             <div class="col-md-5 pull-right home-textbox">
                 <h3 class="post_title">Contact</h3>
-                <?php echo do_shortcode('[contact-form-7 id="32" title="Home Contact"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]'); ?>
             </div>
         </div>
         <?php
-        $contactImgPost = get_post(45);
+        $contactImgPost = get_post(120);
         $image = wp_get_attachment_image_src(get_post_thumbnail_id($contactImgPost->ID), 'single-post-thumbnail');
         ?>
         <div class="col-md-6 nopadding contact-image" style="background-image: url(<?php echo $image[0]; ?>);">

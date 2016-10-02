@@ -151,7 +151,9 @@ header #navbar-brand span {
     background-size: cover;
     background-position: right;
 }
-
+.about-box .about-image{
+    background-position:top;
+}
 .contact-box input, .contact-box textarea {
     border:0;
     border-bottom:1px solid #DFDFDF;
@@ -187,6 +189,8 @@ span.wpcf7-not-valid-tip {
 }
 
 .readmore, .contact-box .wpcf7-submit {
+    display:block;
+    float:left;
     background-color:#009d97;
     border:2px solid #009d97;
     color:#FFF;
@@ -197,6 +201,7 @@ span.wpcf7-not-valid-tip {
     transition-property:background-color, border, color;
     -webkit-background-color, border, color;
     -moz-background-color, border, color;
+    margin-top:20px;
 }
 
 .readmore:hover, .contact-box .wpcf7-submit:hover {
@@ -447,6 +452,13 @@ aside .search-form input {
 	line-height: 17px;
 	margin: 0;
 	padding: 0 4px 5px;
+}
+
+.center-cropped {
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 350px;
+    width: 500px;
 }
 
 @media screen and (max-width: 768px) and (orientation : landscape){

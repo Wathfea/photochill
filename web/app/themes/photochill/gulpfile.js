@@ -17,6 +17,7 @@ var own_css = 'css';
 gulp.task('scripts', function() {
     return gulp.src([
             bower + '/jquery/dist/jquery.js',
+            bower + '/lightbox2/dist/js/lightbox.js',
             own_js + '/*.js',
             own_js + '/vendor/bootstrap.min.js',
             own_js + '/vendor/html5shiv.js',
@@ -32,6 +33,7 @@ gulp.task('scripts', function() {
 // Concatenate & Minify CSS
 gulp.task('css', function() {
     return gulp.src([
+            bower + '/lightbox2/dist/css/lightbox.css',
             own_css + '/*.css'
         ])
         .pipe(concat('all.css'))

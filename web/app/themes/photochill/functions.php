@@ -88,8 +88,7 @@ add_action('widgets_init', 'pc_widget_setup');
 function pc_scripts() {
     $rand = rand(1,10000);
     wp_enqueue_style('main-style', get_template_directory_uri() . '/public/css/all.min.css?v=' . $rand);
-    wp_enqueue_script('jquery');
-    //wp_enqueue_script('main-script', get_template_directory_uri() . '/public/js/all.min.js?v=' . $rand, array(), false, false);
+    wp_enqueue_script('main-script', get_template_directory_uri() . '/public/js/all.min.js?v=' . $rand, array(), false, true);
     wp_enqueue_style('pc-style', get_stylesheet_uri());
 }
 add_action( 'wp_enqueue_scripts', 'pc_scripts' );
@@ -101,17 +100,17 @@ add_action( 'wp_enqueue_scripts', 'pc_scripts' );
 require get_template_directory() . '/inc/PCMyWalkerNavMenu.php';
 
 /**
- * Register our custom post type for Main Photos
+ * Register our custom post type for Fix Photos
  */
-add_action( 'init', 'register_mainphotos' );
-function register_mainphotos() {
+add_action( 'init', 'register_fixphotos' );
+function register_fixphotos() {
 
     $args = array(
         'labels'             => array(
-            'name'               => _x( 'Főoldali képek', 'post type general name', 'photochill' ),
+            'name'               => _x( 'Fix képek', 'post type general name', 'photochill' ),
             'singular_name'      => _x( 'Kép', 'post type singular name', 'photochill' ),
-            'menu_name'          => _x( 'Főoldali képek', 'admin menu', 'photochill' ),
-            'name_admin_bar'     => _x( 'Főoldali képek', 'add new on admin bar', 'photochill' ),
+            'menu_name'          => _x( 'Fix képek', 'admin menu', 'photochill' ),
+            'name_admin_bar'     => _x( 'Fix képek', 'add new on admin bar', 'photochill' ),
             'add_new'            => _x( 'Új', 'About', 'photochill' ),
             'add_new_item'       => __( 'Új', 'photochill' ),
             'new_item'           => __( 'Új kép', 'photochill' ),
@@ -128,7 +127,7 @@ function register_mainphotos() {
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'mainphotos' ),
+        'rewrite'            => array( 'slug' => 'fixphotos' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
@@ -136,7 +135,7 @@ function register_mainphotos() {
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail' )
     );
 
-    register_post_type( 'mainphotos', $args );
+    register_post_type( 'fixphotos', $args );
 }
 
 /**
@@ -205,13 +204,56 @@ function register_parallaxphotos() {
  }
  add_action( 'manage_posts_custom_column' , 'custom_columns_data', 10, 2 );
 
+
+/**
+ * Register our custom post type for Main Gallery
+ */
+add_action( 'init', 'register_homephotos' );
+function register_homephotos() {
+
+    $args = array(
+        'labels'             => array(
+            'name'               => _x( 'Főoldali képek', 'post type general name', 'photochill' ),
+            'singular_name'      => _x( 'Kép', 'post type singular name', 'photochill' ),
+            'menu_name'          => _x( 'Főoldali képek', 'admin menu', 'photochill' ),
+            'name_admin_bar'     => _x( 'Főoldali képek', 'add new on admin bar', 'photochill' ),
+            'add_new'            => _x( 'Új', 'About', 'photochill' ),
+            'add_new_item'       => __( 'Új', 'photochill' ),
+            'new_item'           => __( 'Új kép', 'photochill' ),
+            'edit_item'          => __( 'Kép szerkesztése', 'photochill' ),
+            'view_item'          => __( 'Kép megtekintése', 'photochill' ),
+            'all_items'          => __( 'Összes elem', 'photochill' ),
+            'search_items'       => __( 'Keresés', 'photochill' ),
+            'parent_item_colon'  => __( 'Szülő:', 'photochill' ),
+            'not_found'          => __( 'Nem található.', 'photochill' ),
+            'not_found_in_trash' => __( 'Nem található a kukában.', 'photochill' )
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'homephotos' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail' )
+    );
+
+    register_post_type( 'homephotos', $args );
+}
+
+add_filter('manage_homephotos_posts_columns' , 'custom_columns');
+
+
 /**
  * Prevent delete the mian pictures
  * @param  [type] $post_ID [description]
  * @return [type]          [description]
  */
  function restrict_post_deletion($post_ID){
-      $restricted_ements = array(45,51,92,93);
+      $restricted_ements = array(119,120,12,7, 123);
       if(in_array($post_ID, $restricted_ements)){
           wp_redirect(admin_url('index.php'));
           exit;
