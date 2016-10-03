@@ -8,12 +8,13 @@ jQuery( document ).ready(function() {
      });
     lightbox.option({
         'fitImagesInViewport': true
-    })
+    });
 
+    // Disable right click
     jQuery(document).bind('contextmenu', function(e) {
         return false;
     });
-
+    //Disable print screen
     function copyToClipboard() {
         var aux = document.createElement("input");
         aux.setAttribute("value", "A print screen nem engedélyezett!");
