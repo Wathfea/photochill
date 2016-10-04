@@ -26,13 +26,13 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID),
         <div class="col-md-6 nopadding about-image" style="background-image: url(<?php echo $image[0]; ?>);">
         </div>
         <div class="col-md-6">
-            <div class="col-md-5 home-textbox">
+            <div class="col-md-6 home-textbox">
                 <?php
                 $about = get_post(18);
                 ?>
                 <h3 class="post_title"><?php echo $about->post_title; ?></h3>
                 <div>
-                    <?php echo b_excerpt($about->post_content, 500); ?>
+                    <?php echo b_excerpt($about->post_content, 600); ?>
                 </div>
                 <a class="readmore" href="/rolam">Tovább...</a>
             </div>
@@ -71,7 +71,7 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxBottomImg->I
 <div class="container-fluid contact-box" id="contactbox">
     <div class="row">
         <div class="col-md-6">
-            <div class="col-md-5 pull-right home-textbox">
+            <div class="col-md-6 pull-right home-textbox">
                 <h3 class="post_title">Contact</h3>
                 <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]'); ?>
             </div>

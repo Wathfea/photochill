@@ -11,6 +11,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12">
+							Email: <a href="mailto:s.zsolt86@gmail.com">s.zsolt86@gmail.com</a><br />
+							Tel: +36 20 352 9956<br />
 							© 2016 by Zsolt Sári - photochill.com
 						</div>
 					</div>

@@ -456,6 +456,9 @@ aside .search-form input {
 .gallery-home .text-center{
     padding:0 !important;
 }
+.gallery-home .row{
+    margin-top:0 !important;
+}
 .center-cropped {
     object-fit: cover; /* Do not scale the image */
     object-position: center; /* Center the image within the element */
