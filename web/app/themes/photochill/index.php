@@ -48,7 +48,7 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID),
 
             $galleryEleemnts = get_post_gallery( $homeGallery->ID , false);
             foreach( $galleryEleemnts['src'] as $src ) : ?>
-                <div class="col-xs-12 col-sm-4 text-center">
+                <div class="col-xs-12 col-sm-4 text-center jpibfi_container">
                     <a href="<?php echo $src; ?>" data-lightbox="image-1">
                         <img src="<?php echo $src; ?>" class="center-cropped" />
                     </a>
