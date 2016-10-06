@@ -3,8 +3,8 @@ jQuery( document ).ready(function() {
 
     /* Smooth scrolling when clicking on an anchor */
     jQuery('.smooth a').on('click', function(event){
-     event.preventDefault();
-        jQuery('html,body').animate({scrollTop:jQuery(this.hash).offset().top},500);
+        //event.preventDefault();
+        jQuery('html,body').animate({scrollTop:jQuery(this.hash).offset().top - 100},500);
      });
     lightbox.option({
         'fitImagesInViewport': true

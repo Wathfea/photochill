@@ -219,14 +219,15 @@ INSERT INTO `wp_modula_images` (`Id`, `gid`, `imageId`, `imagePath`, `link`, `ta
 
 CREATE TABLE `wp_ngg_album` (
   `id` bigint(20) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `previewpic` bigint(20) NOT NULL DEFAULT '0',
-  `albumdesc` mediumtext COLLATE utf8mb4_unicode_520_ci,
-  `sortorder` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `albumdesc` mediumtext COLLATE utf8mb4_unicode_ci,
+  `sortorder` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `pageid` bigint(20) NOT NULL DEFAULT '0',
   `extras_post_id` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- --------------------------------------------------------
 
@@ -236,16 +237,16 @@ CREATE TABLE `wp_ngg_album` (
 
 CREATE TABLE `wp_ngg_gallery` (
   `gid` bigint(20) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `path` mediumtext COLLATE utf8mb4_unicode_520_ci,
-  `title` mediumtext COLLATE utf8mb4_unicode_520_ci,
-  `galdesc` mediumtext COLLATE utf8mb4_unicode_520_ci,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `path` mediumtext COLLATE utf8mb4_unicode_ci,
+  `title` mediumtext COLLATE utf8mb4_unicode_ci,
+  `galdesc` mediumtext COLLATE utf8mb4_unicode_ci,
   `pageid` bigint(20) NOT NULL DEFAULT '0',
   `previewpic` bigint(20) NOT NULL DEFAULT '0',
   `author` bigint(20) NOT NULL DEFAULT '0',
   `extras_post_id` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `wp_ngg_gallery`
@@ -262,19 +263,19 @@ INSERT INTO `wp_ngg_gallery` (`gid`, `name`, `slug`, `path`, `title`, `galdesc`,
 
 CREATE TABLE `wp_ngg_pictures` (
   `pid` bigint(20) NOT NULL,
-  `image_slug` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `image_slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `post_id` bigint(20) NOT NULL DEFAULT '0',
   `galleryid` bigint(20) NOT NULL DEFAULT '0',
-  `filename` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `description` mediumtext COLLATE utf8mb4_unicode_520_ci,
-  `alttext` mediumtext COLLATE utf8mb4_unicode_520_ci,
+  `filename` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` mediumtext COLLATE utf8mb4_unicode_ci,
+  `alttext` mediumtext COLLATE utf8mb4_unicode_ci,
   `imagedate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `exclude` tinyint(4) DEFAULT '0',
   `sortorder` bigint(20) NOT NULL DEFAULT '0',
-  `meta_data` longtext COLLATE utf8mb4_unicode_520_ci,
+  `meta_data` longtext COLLATE utf8mb4_unicode_ci,
   `extras_post_id` bigint(20) NOT NULL DEFAULT '0',
   `updated_at` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `wp_ngg_pictures`
@@ -1431,13 +1432,13 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 
 CREATE TABLE `wp_unitegallery_categories` (
   `id` int(9) NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `alias` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `alias` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `ordering` int(11) NOT NULL,
-  `params` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `type` tinytext COLLATE utf8mb4_unicode_520_ci,
+  `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` tinytext COLLATE utf8mb4_unicode_ci,
   `parent_id` int(9) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `wp_unitegallery_categories`
@@ -1454,12 +1455,12 @@ INSERT INTO `wp_unitegallery_categories` (`id`, `title`, `alias`, `ordering`, `p
 
 CREATE TABLE `wp_unitegallery_galleries` (
   `id` int(9) NOT NULL,
-  `type` varchar(60) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `title` tinytext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `alias` tinytext COLLATE utf8mb4_unicode_520_ci,
+  `type` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` tinytext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `alias` tinytext COLLATE utf8mb4_unicode_ci,
   `ordering` int(11) NOT NULL,
-  `params` text COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `params` text COLLATE utf8mb4_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `wp_unitegallery_galleries`
@@ -1477,19 +1478,19 @@ INSERT INTO `wp_unitegallery_galleries` (`id`, `type`, `title`, `alias`, `orderi
 CREATE TABLE `wp_unitegallery_items` (
   `id` int(9) NOT NULL,
   `published` int(2) NOT NULL,
-  `title` tinytext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `alias` tinytext COLLATE utf8mb4_unicode_520_ci,
-  `type` varchar(60) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `url_image` tinytext COLLATE utf8mb4_unicode_520_ci,
-  `url_thumb` tinytext COLLATE utf8mb4_unicode_520_ci,
+  `title` tinytext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `alias` tinytext COLLATE utf8mb4_unicode_ci,
+  `type` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url_image` tinytext COLLATE utf8mb4_unicode_ci,
+  `url_thumb` tinytext COLLATE utf8mb4_unicode_ci,
   `ordering` int(11) NOT NULL,
   `catid` int(9) NOT NULL,
   `imageid` int(9) DEFAULT NULL,
-  `params` text COLLATE utf8mb4_unicode_520_ci,
-  `content` text COLLATE utf8mb4_unicode_520_ci,
-  `contentid` varchar(60) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `params` text COLLATE utf8mb4_unicode_ci,
+  `content` text COLLATE utf8mb4_unicode_ci,
+  `contentid` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `parent_id` int(9) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
