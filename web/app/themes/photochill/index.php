@@ -72,7 +72,7 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxBottomImg->I
     <div class="row">
         <div class="col-md-6">
             <div class="col-md-6 pull-right home-textbox">
-                <h3 class="post_title">Contact</h3>
+                <h3 class="post_title">Kontakt</h3>
                 <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]'); ?>
             </div>
         </div>

@@ -24,7 +24,6 @@
 		</div>
 		<div class="col-xs-12"  style="margin-top: 25px;">
 			<?php the_content(); ?>
-			<p class="createdby">@<?php the_author(); ?></p>
 		</div>
 	</div>
 
