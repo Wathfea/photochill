@@ -26,7 +26,7 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID),
         <div class="col-md-6 nopadding about-image" style="background-image: url(<?php echo $image[0]; ?>);">
         </div>
         <div class="col-md-6">
-            <div class="col-md-6 home-textbox">
+            <div class="col-md-6 home-textbox about-text">
                 <?php
                 $about = get_post(18);
                 ?>

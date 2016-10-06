@@ -8,7 +8,9 @@ body {
 body.admin-bar .navbar-fixed-top {
     top:32px;
 }
-
+a{
+    color:#009d97;
+}
 a:hover {
     text-decoration:none !important;
 }
@@ -45,7 +47,7 @@ header #navbar-brand span {
     color: black;
     font-weight: 400;
     font-size: 28px;
-    padding: 5px;
+    padding: 5px 0;
     text-decoration: none;
 }
 
@@ -115,7 +117,7 @@ header #navbar-brand span {
     height:700px;
     padding:70px 0 20px 0;
     transform-style: inherit;
-    transform: translateZ(-10px) scale(1.03);
+    transform: translateZ(-100px) scale(1.03);
 }
 
 .background, .background:before {
@@ -156,6 +158,10 @@ header #navbar-brand span {
 }
 .about-box .about-image{
     background-position:top;
+}
+.about-box .about-text{
+    padding-top:30px;
+    padding-bottom:50px;
 }
 .contact-box input, .contact-box textarea {
     border:0;
@@ -282,21 +288,27 @@ form .btn {
 
 .inner_title, .inner_title a {
     font-weight:400 !important;
-    color:#009d97;
+    color:#776e87;
 }
-
+.inner_title{
+    padding-left:15px;
+}
 .post_title {
     font-weight:400;
     text-transform:none;
 }
 
-.post_title:after {
+.post_title:after, .inner_title:after {
     display:block;
     content:"";
     width:50px;
     height:2px;
     background-color:#009d97;
     margin-top:10px;
+}
+.article img.size-full{
+    width:900px;
+    height:auto;
 }
 figure.effect-winston a{
     color:#FFF !important;
@@ -305,7 +317,7 @@ figure.effect-winston a{
 .hiddendate{
     opacity: 0;
     transition:opacity 0.3s ease 0.3s;
-    -webkit-transition:opacity 0.3s ease 0.3s;
+    -webkit-transition:opacity 0.1s ease 0.3s;
 }
 figure.effect-winston:hover .hiddendate{
     opacity:1;

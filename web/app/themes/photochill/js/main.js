@@ -9,7 +9,7 @@ jQuery( document ).ready(function() {
     lightbox.option({
         'fitImagesInViewport': true
     });
-
+/*
     // Disable right click
     jQuery(document).bind('contextmenu', function(e) {
         return false;
@@ -35,5 +35,5 @@ jQuery( document ).ready(function() {
         jQuery("body").show();
     }).blur(function() {
         jQuery("body").hide();
-    });
+    });*/
 });
