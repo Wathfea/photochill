@@ -101,6 +101,7 @@ header #navbar-brand span {
 
 .content {
     padding-top:64px;
+    min-height:1000px;
 }
 
 .parallax {
@@ -116,8 +117,8 @@ header #navbar-brand span {
     background-size: cover;
     height:700px;
     padding:70px 0 20px 0;
-    transform-style: inherit;
-    transform: translateZ(-100px) scale(1.03);
+    /*transform-style: inherit;
+    transform: translateZ(-100px) scale(1.03);*/
 }
 
 .background, .background:before {
@@ -291,6 +292,7 @@ form .btn {
     color:#776e87;
 }
 .inner_title{
+    padding-bottom: 20px;
     padding-left:15px;
 }
 .post_title {
