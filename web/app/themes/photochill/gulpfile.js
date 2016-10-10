@@ -19,7 +19,7 @@ gulp.task('scripts', function() {
             bower + '/jquery/dist/jquery.js',
             bower + '/lightbox2/dist/js/lightbox.js',
             own_js + '/*.js',
-            own_js + '/vendor/bootstrap.min.js',
+            bower + '/bootstrap/dist/js/bootstrap.js',
             own_js + '/vendor/html5shiv.js',
             own_js + '/vendor/modernizr.min.js'
         ])

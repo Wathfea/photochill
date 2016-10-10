@@ -11,7 +11,7 @@ jQuery( document ).ready(function() {
     });
 
     // Disable right click
-    jQuery(document).bind('contextmenu', function(e) {
+    /*jQuery(document).bind('contextmenu', function(e) {
         return false;
     });
     //Disable print screen
@@ -35,5 +35,5 @@ jQuery( document ).ready(function() {
         jQuery("body").show();
     }).blur(function() {
         jQuery("body").hide();
-    });
+    });*/
 });

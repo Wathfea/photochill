@@ -2,6 +2,7 @@
   "name": "photochill",
   "dependencies": {
     "jquery": "^2.2.3",
-    "lightbox2": "^2.8.2"
+    "lightbox2": "^2.8.2",
+    "bootstrap": "^3.3.7"
   }
 }
