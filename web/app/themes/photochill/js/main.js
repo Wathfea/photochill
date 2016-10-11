@@ -11,7 +11,7 @@ jQuery( document ).ready(function() {
     });
 
     // Disable right click
-    /*jQuery(document).bind('contextmenu', function(e) {
+    jQuery(document).bind('contextmenu', function(e) {
         return false;
     });
     //Disable print screen
@@ -35,5 +35,13 @@ jQuery( document ).ready(function() {
         jQuery("body").show();
     }).blur(function() {
         jQuery("body").hide();
-    });*/
+    });
+
+    // Contact box size on responsive
+
+    var windowWidth = jQuery(window).width();
+    if(windowWidth < 768){
+        jQuery('.wpcf7-form-control-wrap input').attr('size','30');
+        jQuery('.wpcf7-form-control-wrap textarea').attr('cols','30');
+    }
 });

@@ -10,12 +10,12 @@
           content="Sári Zsolt - Photochill">
     <meta name="author" content="photochill.com">
     <meta name="keywords"
-          content="">
-    <meta property="og:title" content="Bounce Around Barcelona"/>
+          content="Photochill, Sári Zsolt, Fotográfus, Esküvői fotó, Szeged, Fotós, Fotózás, Családi, Love, Wedding, Couples, Family">
+    <meta property="og:title" content="Photochill.com"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="http://photochill.com/"/>
     <meta property="og:image" content="<?php echo bloginfo('template_url'); ?>/images/logo.png"/>
-    <meta property="og:description" content="Explore the real vibration of Barcelona by Unique Bike & Walking Tour!"/>
+    <meta property="og:description" content="Sári Zsolt fotográfus"/>
     <meta property="og:locale" content="en_GB"/>
     <meta property="og:locale:alternate" content="es_ES"/>
     <meta property="og:locale:alternate" content="hu_HU"/>
@@ -74,7 +74,7 @@
                                 'container'       => 'div',
                                 'container_class' => 'collapse navbar-collapse',
                                 'container_id'    => 'navbar-collapse-1',
-                                'menu_class'      => 'nav navbar-nav navbar-right',
+                                'menu_class'      => 'nav navbar-nav navbar-screen navbar-right',
                                 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                                 'walker'          => new PCMyWalkerNavMenu()]
                         );

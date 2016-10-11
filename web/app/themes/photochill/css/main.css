@@ -62,7 +62,12 @@ header #navbar-brand span {
 #navbar-brand, #navbar-collapse-1 ul {
     line-height:64px;
 }
-
+#navbar-collapse-1 .navbar-screen{
+}
+#navbar-collapse-1 .navbar-toggle{
+        background-color:#FFF;
+        box-shadow:0 0 8px #C1C1C1;
+}
 #navbar-collapse-1 ul li a {
     color: #3E3E3E;
     text-transform:uppercase;
@@ -212,6 +217,7 @@ span.wpcf7-not-valid-tip {
     -webkit-background-color, border, color;
     -moz-background-color, border, color;
     margin-top:20px;
+    margin-bottom:20px;
 }
 
 .readmore:hover, .contact-box .wpcf7-submit:hover {
@@ -405,7 +411,9 @@ aside .search-form input {
 }
 
 @media (max-width: 768px) {
-
+    .content{
+        padding:0 !important;
+    }
 }
 
 

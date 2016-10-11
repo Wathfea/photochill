@@ -13,7 +13,7 @@
 								<form class="form-horizontal" method="get" action="<?php echo esc_url(home_url('/')); ?>" role="form">
 									<div class="form-group">
 										<div class="col-xs-10">
-											<input type="text" name="s" value="<?php echo esc_attr(get_search_query()); ?>" placeholder="<?php echo esc_attr_x('Search &hellip;', 'placeholder', 'bouncelona'); ?>" title="<?php echo esc_attr_x('Search &hellip;', 'label', 'bouncelona'); ?>" class="form-control" />
+											<input type="text" name="s" value="<?php echo esc_attr(get_search_query()); ?>" placeholder="<?php echo esc_attr_x('Search &hellip;', 'placeholder', 'photochill'); ?>" title="<?php echo esc_attr_x('Search &hellip;', 'label', 'photochill'); ?>" class="form-control" />
 										</div>
 										<div class="col-xs-2">
 											<button type="submit" class="btn btn-default"><?php _e('Search', 'photochill'); ?></button>
