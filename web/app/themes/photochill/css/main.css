@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 .article img {
     max-width:100%;
     height:auto;
+    max-height:auto;
 }
 
 header #navbar-brand img {
@@ -123,9 +124,24 @@ header #navbar-brand span {
     height:700px;
     padding:70px 0 20px 0;
     transform-style: inherit;
+    -webkit-transform-style:inherit;
+    -moz-transform-style:inherit;
     transform: translateZ(-100px) scale(1.03);
+    -webkit-transform: translateZ(-100px) scale(1.03);
+    -moz-transform: translateZ(-100px) scale(1.03);
 }
-
+/* IE8, IE9 */
+.parallax-top{
+    transform-style: flat !important;
+    transform:none !important;
+}
+/* IE9, IE10 */
+@media screen and (min-width:0\0) {
+    .parallax-top{
+        transform-style: flat !important;
+        transform:none !important;
+    }
+}
 .background, .background:before {
   background: 50% 50% / cover;
 }

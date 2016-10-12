@@ -47,6 +47,14 @@
     your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
     improve your experience.</p>
 <![endif]-->
+<!--[if IE]>
+<style>
+    .parallax-top{
+        transform-style: flat !important;
+        transform:none !important;
+    }
+</style>
+<![endif]-->
 <header>
     <!-- Navigation -->
    <div class="container-fluid">
