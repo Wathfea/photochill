@@ -51,7 +51,7 @@ header #navbar-brand span {
     padding: 5px 0;
     text-decoration: none;
 }
-
+/*
 .navbar {
     background-color:#FFF;
     height:64px;
@@ -59,7 +59,9 @@ header #navbar-brand span {
     border:none !important;
     margin-bottom:0;
 }
-
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse{
+    max-height:auto !important;
+}
 #navbar-brand, #navbar-collapse-1 ul {
     line-height:64px;
 }
@@ -103,7 +105,7 @@ header #navbar-brand span {
     background-color: #FFF !important;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176) !important;
     white-space: nowrap !important;
-}
+}*/
 
 .content {
     padding-top:64px;
