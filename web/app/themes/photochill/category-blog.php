@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="container blog_posts">
-    <div class="col-xs-9">
-        <h2 class="inner_title"><?php echo single_cat_title("", false); ?></h2>
+    <div class="col-md-9 col-xs-12">
+        <h2 class="inner_title text-left"><?php echo single_cat_title("", false); ?></h2>
         <div class="grid">
             <?php if (have_posts()) : ?>
                 <?php
@@ -53,7 +53,7 @@
             </div>
         </div>
     </div>
-    <div class="col-xs-3">
+    <div class="col-md-3 col-xs-12">
         <?php dynamic_sidebar('sidebar-right'); ?>
     </div>
 </div>

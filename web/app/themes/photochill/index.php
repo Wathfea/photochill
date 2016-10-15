@@ -17,7 +17,7 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID),
     </div>
 </div>
 
-<div class="container-fluid about-box" id="aboutbox">
+<div class="container-fluid about-box" id="about-box">
     <div class="row">
         <?php
         $aboutImgPost = get_post(119);
@@ -68,7 +68,7 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxBottomImg->I
     </div>
 </div>
 
-<div class="container-fluid contact-box" id="contactbox">
+<div class="container-fluid contact-box" id="contact-box">
     <div class="row">
         <div class="col-md-6">
             <div class="col-md-6 pull-right home-textbox">

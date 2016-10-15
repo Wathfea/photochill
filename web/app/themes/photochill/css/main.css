@@ -62,6 +62,7 @@ header #navbar-brand span {
 }
 #navbar-brand, #navbar-collapse-1 ul {
     line-height:59px;
+    margin-top:0;
 }
 #navbar-collapse-1 .navbar-screen{
 }
@@ -130,18 +131,7 @@ header #navbar-brand span {
     -webkit-transform: translateZ(-100px) scale(1.03);
     -moz-transform: translateZ(-100px) scale(1.03);
 }
-/* IE8, IE9 */
-.parallax-top{
-    transform-style: flat !important;
-    transform:none !important;
-}
-/* IE9, IE10 */
-@media screen and (min-width:0\0) {
-    .parallax-top{
-        transform-style: flat !important;
-        transform:none !important;
-    }
-}
+
 .background, .background:before {
   background: 50% 50% / cover;
 }
@@ -316,6 +306,7 @@ form .btn {
 .inner_title{
     padding-bottom: 20px;
     padding-left:15px;
+    text-align:left;
 }
 .post_title {
     font-weight:400;
@@ -341,64 +332,6 @@ figure.effect-winston a{
 .published-date, .createdby {
     font-style:italic;
     margin-bottom:5px;
-}
-/* Sidebar Style */
-aside {
-    padding-bottom:25px;
-}
-
-.widget-title {
-    font-weight: 400;
-    font-size: 22px;
-    color: #009d97;
-    padding-top:0;
-}
-
-.widget_recent_entries ul {
-    padding-left:10px;
-}
-
-aside ul {
-    list-style: none;
-}
-
-aside ul li > a , .tagcloud > a {
-    color: #88898c;
-    font-size: 13px !important;
-}
-
-
-aside .search-form span {
-    display: none;
-}
-
-aside .search-form input {
-    border: 1px solid #88898c;
-    background-color: #fff;
-    padding: 5px;
-}
-
-/* Responsive */
-
-@media (max-width: 992px) {
-
-}
-
-@media (max-width: 768px) {
-    .content{
-        padding:0 !important;
-    }
-    .article, .blog_posts {
-        padding-top:60px;
-    }
-}
-
-
-
-/* --------------------------------------------- */
-
-@media screen and (max-width: 768px) {
-
 }
 
 /* ---------------------------------------------------------- Archive pages */
@@ -431,21 +364,21 @@ aside .search-form input {
 .alignright{float:right; margin-left:15px;margin-bottom:15px;}
 .aligncenter{display:block; margin:10px auto !important;}
 .wp-caption{
-	background-color: #F3F3F3;
-	border: 1px solid #DDDDDD;
-	border-radius: 3px 3px 3px 3px;
-	padding-top: 4px;
-	text-align: center;
-	margin: 15px;
+    background-color: #F3F3F3;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    padding-top: 4px;
+    text-align: center;
+    margin: 15px;
 }
 .wp-caption img{
-	margin:0;
+    margin:0;
 }
 .wp-caption p.wp-caption-text{
-	font-size: 11px;
-	line-height: 17px;
-	margin: 0;
-	padding: 0 4px 5px;
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
 }
 .gallery-home .text-center{
     padding:0 !important;
@@ -460,12 +393,78 @@ aside .search-form input {
     width: 100%;
 }
 
-@media screen and (max-width: 768px) and (orientation : landscape){
-    .navbar-bbarcelona {
-        height: 55px;
-        min-height: 55px !important;
-    }
+/* Sidebar Style */
+aside {
+    padding-bottom:25px;
+}
 
+.widget-title {
+    font-weight: 400;
+    font-size: 22px;
+    color: #009d97;
+    padding-top:0;
+}
+
+.widget_recent_entries ul {
+    padding-left:10px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li > a , .tagcloud > a {
+    color: #88898c;
+    font-size: 13px !important;
+}
+
+/*
+aside .search-form span {
+    display: none;
+}
+
+aside .search-form input {
+    border: 1px solid #88898c;
+    background-color: #fff;
+    padding: 5px;
+}
+
+aside .search-form .search-submit{
+    width:40px;
+    overflow:hidden;
+    text-indent:100px;
+}
+
+aside .search-form .search-submit::before{
+    content:"\e003";
+    color:#88898c;
+    font-size:20px;
+}*/
+/* Responsive */
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+    ul{
+        padding:0;
+    }
+    .content{
+        padding:0 !important;
+    }
+    .article, .blog_posts {
+        padding-top:60px;
+    }
+    .about-box .readmore, .contact-box .wpcf7-submit{
+        float:none;
+        margin-left:auto;
+        margin-right:auto;
+        width:100px;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation : landscape){
     #navbar-brand img {
         height: 55px;
     }
