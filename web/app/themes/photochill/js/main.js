@@ -10,6 +10,10 @@ jQuery( document ).ready(function() {
         'fitImagesInViewport': true
     });
 
+    jQuery('#navbar-collapse-1').on('focusout',function(){
+        jQuery(this).removeClass('in');
+    });
+
     // Disable right click
     jQuery(document).bind('contextmenu', function(e) {
         return false;
