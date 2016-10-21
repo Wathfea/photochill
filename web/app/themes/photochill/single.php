@@ -6,7 +6,7 @@
 			setup_postdata($post);
 	?>
 
-	<div>
+	<div class="my-box">
 		<div class="bg">
 			<img src="<?php the_post_thumbnail_url('large'); ?>" alt="">
 		</div>
