@@ -7,13 +7,24 @@
 get_header();
 
 $parallaxTopImg = get_post(7);
-$image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID), 'single-post-thumbnail');
+$imageTop = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID), 'single-post-thumbnail');
+
+$parallaxBottomImg = get_post(12);
+$imageBottom = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxBottomImg->ID), 'single-post-thumbnail');
 ?>
+<style>
+    .parallax-top {
+        background-image: url(<?php echo $imageTop[0]; ?>);
+    }
+    .parallax-bottom{
+        background-image: url(<?php echo $imageBottom[0]; ?>);
+    }
+</style>
 <div class="container-fluid parallax">
-    <div class="parallax-top text-center"  style="background-image: url(<?php echo $image[0]; ?>);">
-        <img src="<?php echo get_bloginfo('template_url') ?>/images/logo.png" />
-        <h1><?php echo get_bloginfo('name'); ?></h1>
-        <h2><?php echo get_bloginfo('description'); ?></h2>
+    <div class="parallax-top text-center rellax" data-rellax-speed="-6">
+        <img src="<?php echo get_bloginfo('template_url') ?>/images/logo.png" class="rellax" data-rellax-speed="-1" />
+        <h1 class="rellax" data-rellax-speed="-1"><?php echo get_bloginfo('name'); ?></h1>
+        <h2 class="rellax" data-rellax-speed="-1"><?php echo get_bloginfo('description'); ?></h2>
     </div>
 </div>
 
@@ -42,7 +53,6 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID),
 
 <div class="container-fluid gallery-home">
     <div class="row" style="margin-top: 10px;">
-        <?php //echo do_shortcode('[Modula id="1"]'); ?>
         <?php
             $homeGallery = get_post(123);
 
@@ -59,12 +69,8 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxTopImg->ID),
     </div>
 </div>
 
-<?php
-$parallaxBottomImg = get_post(12);
-$image = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxBottomImg->ID), 'single-post-thumbnail');
-?>
 <div class="container-fluid parallax">
-    <div class="parallax-bottom text-center" style="background-image: url(<?php echo $image[0]; ?>);">
+    <div class="parallax-bottom text-center">
     </div>
 </div>
 

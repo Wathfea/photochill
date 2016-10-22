@@ -118,18 +118,17 @@ header #navbar-brand span {
 
 .parallax-top {
     background-repeat:no-repeat;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     height:700px;
     padding:70px 0 20px 0;
-    transform-style: inherit;
+    /*transform-style: inherit;
     -webkit-transform-style:inherit;
     -moz-transform-style:inherit;
     transform: translateZ(-100px) scale(1.03);
     -webkit-transform: translateZ(-100px) scale(1.03);
-    -moz-transform: translateZ(-100px) scale(1.03);
+    -moz-transform: translateZ(-100px) scale(1.03);*/
 }
 
 .background, .background:before {
@@ -140,7 +139,6 @@ header #navbar-brand span {
     background-repeat:no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     height:500px;
     padding:70px 0 20px 0;

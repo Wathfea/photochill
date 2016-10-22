@@ -12,6 +12,7 @@ var dest_css = 'public/css';
 var bower = 'bower_components';
 var own_js = 'js';
 var own_css = 'css';
+var node_js = 'node_modules';
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
@@ -21,7 +22,8 @@ gulp.task('scripts', function() {
             own_js + '/*.js',
             bower + '/bootstrap/dist/js/bootstrap.js',
             own_js + '/vendor/html5shiv.js',
-            own_js + '/vendor/modernizr.min.js'
+            own_js + '/vendor/modernizr.min.js',
+            node_js + '/rellax/rellax.js'
         ])
         .pipe(concat('all.js'))
         .pipe(gulp.dest('dist'))
