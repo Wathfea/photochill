@@ -44,14 +44,6 @@ jQuery( document ).ready(function() {
         }
     });
 
-    jQuery(window).focus(function() {
-        jQuery("body").show();
-    }).blur(function() {
-        var focusedElement = jQuery(':focus').prop('nodeName');
-        if ( focusedElement != 'embed' || 'iframe' ) {
-            jQuery("body").hide();
-        }
-    });
 
 
     // Contact box size on responsive
@@ -61,4 +53,17 @@ jQuery( document ).ready(function() {
         jQuery('.wpcf7-form-control-wrap input').attr('size','30');
         jQuery('.wpcf7-form-control-wrap textarea').attr('cols','30');
     }
+});
+
+jQuery(window).focus(function() {
+    jQuery("body").show();
+}).blur(function() {
+    if(document.activeElement != (document.getElementsByTagName("iframe")[0] || document.getElementsByTagName("embed")[0])) {
+        jQuery("body").hide();
+    }
+
+    /*var focusedElement = jQuery(document.activeElement).prop('nodeName');
+    if ( focusedElement != 'IFRAME' || 'EMBED' ) {
+        jQuery("body").hide();
+    }*/
 });
