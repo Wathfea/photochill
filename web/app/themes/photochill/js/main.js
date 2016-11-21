@@ -47,8 +47,12 @@ jQuery( document ).ready(function() {
     jQuery(window).focus(function() {
         jQuery("body").show();
     }).blur(function() {
-        jQuery("body").hide();
+        var focusedElement = jQuery(':focus').prop('nodeName');
+        if ( focusedElement != 'embed' || 'iframe' ) {
+            jQuery("body").hide();
+        }
     });
+
 
     // Contact box size on responsive
 
