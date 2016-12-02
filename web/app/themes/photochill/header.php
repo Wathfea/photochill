@@ -12,12 +12,6 @@
     <meta name="author" content="photochill.com" />
     <meta name="keywords"
           content="Photochill, Sári Zsolt, Fotográfus, Esküvői fotó, Szeged, Fotós, Fotózás, Családi, Love, Wedding, Couples, Family" />
-    <meta property="og:title" content="Photochill - Sári Zsolt fotográfus" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://photochill.com/" />
-    <meta property="og:image" content="<?php echo bloginfo('template_url'); ?>/images/logo.png" />
-    <meta property="og:description" content="Sári Zsolt fotográfus" />
-    <meta property="og:locale" content="hu_HU" />
     <meta name="dc.language" content="hu" />
     <meta name="dc.title" content="Photochill - Sári Zsolt fotográfus" />
     <meta name="dc.description" content="Photochill - Sári Zsolt fotográfus. Esküvői fotózás Szeged." />
