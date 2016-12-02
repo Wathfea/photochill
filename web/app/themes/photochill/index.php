@@ -22,7 +22,7 @@ $imageBottom = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxBottom
 </style>
 <div class="container-fluid parallax">
     <div class="parallax-top text-center rellax" data-rellax-speed="-6">
-        <img src="<?php echo get_bloginfo('template_url') ?>/images/logo.png" class="rellax" data-rellax-speed="-1" />
+        <img src="<?php echo get_bloginfo('template_url') ?>/images/logo.png" alt="Photochill Logo" class="rellax" data-rellax-speed="-1" />
         <h1 class="rellax" data-rellax-speed="-1"><?php echo get_bloginfo('name'); ?></h1>
         <h2 class="rellax" data-rellax-speed="-1"><?php echo get_bloginfo('description'); ?></h2>
     </div>
@@ -60,7 +60,7 @@ $imageBottom = wp_get_attachment_image_src(get_post_thumbnail_id($parallaxBottom
             foreach( $galleryEleemnts['src'] as $src ) : ?>
                 <div class="col-xs-12 col-sm-4 text-center jpibfi_container">
                     <a href="<?php echo $src; ?>" data-lightbox="image-1">
-                        <img src="<?php echo $src; ?>" class="center-cropped" />
+                        <img src="<?php echo $src; ?>" class="center-cropped" alt="Images in gallery" />
                     </a>
                 </div>
                 <?php

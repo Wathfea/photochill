@@ -17,9 +17,7 @@
     <meta property="og:url" content="http://photochill.com/"/>
     <meta property="og:image" content="<?php echo bloginfo('template_url'); ?>/images/logo.png"/>
     <meta property="og:description" content="Sári Zsolt fotográfus"/>
-    <meta property="og:locale" content="en_GB"/>
-    <meta property="og:locale:alternate" content="es_ES"/>
-    <meta property="og:locale:alternate" content="hu_HU"/>
+    <meta property="og:locale" content="hu_HU"/>
 
     <title>
         <?php
@@ -40,7 +38,6 @@
         ?>
     </title>
 
-    <!--wordpress head-->
     <?php wp_head(); ?>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800' rel='stylesheet' type='text/css'>
