@@ -56,17 +56,17 @@ jQuery( document ).ready(function() {
     }
 });
 
-jQuery(window).focus(function() {
-    jQuery("body").show();
-}).blur(function() {
-    if(document.activeElement != (document.getElementsByTagName("iframe")[0] || document.getElementsByTagName("embed")[0])) {
-        jQuery("body").hide();
-    }
-    /*var focusedElement = jQuery(document.activeElement).prop('tagName');
-    if ( focusedElement != 'IFRAME' || 'EMBED' ) {
-        jQuery("body").hide();
-    }*/
-});
+// jQuery(window).focus(function() {
+//     jQuery("body").show();
+// }).blur(function() {
+//     if(document.activeElement != (document.getElementsByTagName("iframe")[0] || document.getElementsByTagName("embed")[0])) {
+//         jQuery("body").hide();
+//     }
+//     /*var focusedElement = jQuery(document.activeElement).prop('tagName');
+//     if ( focusedElement != 'IFRAME' || 'EMBED' ) {
+//         jQuery("body").hide();
+//     }*/
+// });
 
 
 // jQuery(window).focus(function(e) {

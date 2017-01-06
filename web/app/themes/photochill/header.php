@@ -6,34 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
-    <meta name="description"
-          content="Photochill - Sári Zsolt fotográfus. Esküvői fotózás Szeged." />
     <meta name="author" content="photochill.com" />
     <meta name="keywords"
           content="Photochill, Sári Zsolt, Fotográfus, Esküvői fotó, Szeged, Fotós, Fotózás, Családi, Love, Wedding, Couples, Family" />
     <meta name="dc.language" content="hu" />
     <meta name="dc.title" content="Photochill - Sári Zsolt fotográfus" />
     <meta name="dc.description" content="Photochill - Sári Zsolt fotográfus. Esküvői fotózás Szeged." />
-
-    <title>
-        <?php
-        /*
-    	 * Print the <title> tag based on what is being viewed.
-    	 */
-    	global $page, $paged;
-
-    	wp_title( '|', true, 'right' );
-
-    	// Add the blog name.
-    	bloginfo( 'name' );
-
-    	// Add the blog description for the home/front page.
-    	$site_description = get_bloginfo( 'description', 'display' );
-    	if ( $site_description && ( is_home() || is_front_page() ) )
-    		echo " | $site_description";
-        ?>
-    </title>
+    <meta property="og:image" content="<?php bloginfo('template_url') . '/images/big-bg.jpg' ?>" />
 
     <?php wp_head(); ?>
 
