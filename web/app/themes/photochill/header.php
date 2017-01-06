@@ -12,7 +12,7 @@
     <meta name="dc.language" content="hu" />
     <meta name="dc.title" content="Photochill - Sári Zsolt fotográfus" />
     <meta name="dc.description" content="Photochill - Sári Zsolt fotográfus. Esküvői fotózás Szeged." />
-    <meta property="og:image" content="<?php bloginfo('template_url') . '/images/big-bg.jpg' ?>" />
+    <meta property="og:image" content="<?php bloginfo('template_url'); ?>/images/big-bg.jpg" />
 
     <?php wp_head(); ?>
 
