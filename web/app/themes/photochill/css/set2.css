@@ -382,7 +382,7 @@ figure.effect-winston a:focus {
 	color: #009d97;
 }
 
-figure.effect-winston p a{
+figure.effect-winston p{
 	opacity: 0;
 	/*-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;*/
@@ -405,7 +405,7 @@ figure.effect-winston:hover figcaption::before {
 	transform: rotate3d(0,0,1,20deg);
 }
 
-figure.effect-winston:hover p a {
+figure.effect-winston:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -413,17 +413,17 @@ figure.effect-winston:hover p a {
 	transition-delay: 0.15s;
 }
 
-figure.effect-winston:hover p a:nth-child(3) i {
+figure.effect-winston:hover p:nth-child(3) i {
 	-webkit-transition-delay: 0.05s;
 	transition-delay: 0.05s;
 }
 
-figure.effect-winston:hover p a:nth-child(2) i {
+figure.effect-winston:hover p:nth-child(2) i {
 	-webkit-transition-delay: 0.1s;
 	transition-delay: 0.1s;
 }
 
-figure.effect-winston:hover p a:first-child i {
+figure.effect-winston:hover p:first-child i {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }

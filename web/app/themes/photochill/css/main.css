@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 .article img {
     max-width:100%;
     height:auto;
-    max-height:auto;
+    max-height:none;
 }
 
 header #navbar-brand img {
@@ -219,8 +219,8 @@ span.wpcf7-not-valid-tip {
     -webkit-transition-duration:0.3s;
     -moz-transition-duration:0.3s;
     transition-property:background-color, border, color;
-    -webkit-background-color, border, color;
-    -moz-background-color, border, color;
+    -webkit-transition-property:background-color, border, color;
+    -moz-transition-property:background-color, border, color;
     margin-top:20px;
     margin-bottom:20px;
 }

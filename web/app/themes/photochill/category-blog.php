@@ -10,16 +10,18 @@
                     $meta =  get_post_meta($post->ID , 'Készült');
 
                     ?>
-                    <figure class="effect-winston">
-                        <img src="<?php the_post_thumbnail_url(array(480, 360)); ?>" />
-                        <figcaption>
-                            <h2 class="archive_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                            <!-- <h2 class="archive_title"><?php the_title(); ?></h2> -->
-                            <p class="hiddendate">
-                                <a href="<?php the_permalink(); ?>"><?php echo empty($meta[0]) ? the_date() : $meta[0];  ?></a>
-                            </p>
-                        </figcaption>
-                    </figure>
+                    <a href="<?php the_permalink(); ?>">
+                        <figure class="effect-winston">
+                            <img src="<?php the_post_thumbnail_url(array(480, 360)); ?>" />
+                            <figcaption>
+                                <h2 class="archive_title"><?php the_title(); ?></h2>
+                                <!-- <h2 class="archive_title"><?php the_title(); ?></h2> -->
+                                <p class="hiddendate">
+                                    <?php echo empty($meta[0]) ? the_date() : $meta[0];  ?>
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </a>
                 <?php endwhile;
             else: ?>
                 <p>Sorry, no posts matched your criteria.</p>
