@@ -8,10 +8,10 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <meta name="author" content="photochill.com" />
     <meta name="keywords"
-          content="Photochill, Sári Zsolt, Fotográfus, Esküvői fotó, Szeged, Fotós, Fotózás, Családi, Love, Wedding, Couples, Family" />
+          content="Photochill, Sári Zsolt, Fotográfus, Esküvő, Ausztria, Magyarország, Szeged, Esküvői fotó, Fotós, Fotózás, Wedding" />
     <meta name="dc.language" content="hu" />
     <meta name="dc.title" content="Photochill - Sári Zsolt fotográfus" />
-    <meta name="dc.description" content="Photochill - Sári Zsolt fotográfus. Esküvői fotózás Szeged." />
+    <meta name="dc.description" content="Esküvő fotózás Szegeden és Magyarország egész területén, illetve külföldi esküvő fotózással kapcsolatban is keressetek bizalommal!" />
     <meta property="og:image" content="<?php bloginfo('template_url'); ?>/images/big-bg.jpg" />
 
     <?php wp_head(); ?>
